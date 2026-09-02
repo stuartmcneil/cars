@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stuart McNeil — Cars: Owners Workshop Manual</title>
+<meta name="description" content="Every car Stuart McNeil has owned, from a red Fiat 126 to a VW Tiguan, laid out like a workshop manual: drawings, specifications and owner's notes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23f5c400'/><text y='25' x='4' font-size='22'>🚗</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4f1ea; --paper-2:#ebe7dc; --ink:#1a1a1a; --ink-2:#444; --rule:#8a8677;
+  --yellow:#f5c400; --red:#c8102e; --black:#111;
+  --page-w:1040px;
+}
+*{box-sizing:border-box}
+html{background:#2b2b2b}
+body{margin:0;background:#2b2b2b;color:var(--ink);font-family:"Barlow",Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5}
+h1,h2,h3,h4{font-family:"Barlow Condensed","Arial Narrow",Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0}
+.mono{font-family:"Courier Prime","Courier New",monospace}
+a{color:inherit}
+
+/* ---------- COVER ---------- */
+.cover{max-width:var(--page-w);margin:0 auto;background:var(--black);color:#fff;position:relative;overflow:hidden}
+.cover .band{background:var(--yellow);color:var(--black);padding:14px 36px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.cover .band .brand{font-family:"Barlow Condensed";font-weight:800;font-size:34px;letter-spacing:-.01em}
+.cover .band .brand small{font-weight:600;font-size:16px;margin-left:10px;letter-spacing:.06em}
+.cover .band .no{font-family:"Courier Prime";font-weight:700;font-size:16px}
+.cover .title{padding:40px 36px 20px}
+.cover h1{font-size:clamp(44px,8vw,96px);line-height:.92;font-weight:800}
+.cover h1 span{display:block;color:var(--yellow);font-size:.42em;font-weight:700;letter-spacing:.06em;margin-bottom:12px}
+.cover .models{padding:0 36px 24px;font-family:"Barlow Condensed";font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#ddd}
+.cover .models b{color:var(--yellow)}
+.cover .art{padding:0 36px 30px}
+.cover .art svg{width:100%;height:auto;display:block}
+.cover .strap{background:#fff;color:var(--black);padding:12px 36px;display:flex;gap:18px;flex-wrap:wrap;font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.05em}
+.cover .strap span::before{content:"■ ";color:var(--red)}
+
+/* ---------- PAGES ---------- */
+.page{max-width:var(--page-w);margin:0 auto;background:var(--paper);padding:34px 40px 40px;border-top:1px solid #ccc;position:relative}
+.page::after{content:attr(data-page);position:absolute;right:40px;bottom:14px;font-family:"Courier Prime";font-size:12px;color:var(--ink-2)}
+.page::before{content:attr(data-section);position:absolute;left:40px;bottom:14px;font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.08em;color:var(--ink-2)}
+.chap-head{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:20px;border-bottom:4px solid var(--black);padding-bottom:10px;margin-bottom:22px}
+.chap-head .num{font-family:"Barlow Condensed";font-weight:800;font-size:84px;line-height:.8;color:var(--black)}
+.chap-head .num small{display:block;font-size:14px;font-weight:700;letter-spacing:.12em;color:var(--ink-2);margin-bottom:6px}
+.chap-head h2{font-size:clamp(30px,4.6vw,52px);line-height:.95;font-weight:800}
+.chap-head h2 em{display:block;font-style:normal;font-weight:600;font-size:.46em;color:var(--ink-2);letter-spacing:.04em;margin-top:6px}
+.chap-head .era{text-align:right;font-family:"Courier Prime";font-size:13px;line-height:1.35;color:var(--ink-2)}
+.chap-head .era b{display:block;font-size:22px;color:var(--ink);font-weight:700}
+
+.plate{display:inline-block;background:#f9d21a;color:#111;border:2px solid #111;border-radius:5px;padding:2px 10px 2px 8px;font-family:"Courier Prime";font-weight:700;font-size:19px;letter-spacing:.12em;box-shadow:inset 0 0 0 2px #fff;white-space:nowrap}
+.plate.front{background:#fff}
+.plate::before{content:"UK";display:inline-block;background:#003399;color:#fff;font-size:8px;padding:5px 3px 4px;margin:-2px 7px -2px -8px;vertical-align:middle;border-radius:3px 0 0 3px;letter-spacing:0;font-family:"Barlow";font-weight:600}
+.plate.unknown{background:#ddd;color:#777;letter-spacing:.04em;font-size:14px}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cols.wide{grid-template-columns:1.25fr 1fr}
+@media (max-width:760px){.cols,.cols.wide{grid-template-columns:1fr}.page{padding:26px 18px 40px}.page::before,.page::after{left:18px;right:18px}.chap-head{grid-template-columns:1fr;gap:6px}.chap-head .era{text-align:left}}
+
+.sec{margin:0 0 22px}
+.sec h3{font-size:20px;font-weight:800;border-bottom:2px solid var(--black);padding-bottom:3px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:baseline}
+.sec h3 span{font-family:"Courier Prime";font-size:12px;font-weight:400;text-transform:none;color:var(--ink-2)}
+.sec p{margin:0 0 10px}
+.sec p:last-child{margin-bottom:0}
+
+table.spec{width:100%;border-collapse:collapse;font-size:14px}
+table.spec th{text-align:left;font-family:"Barlow Condensed";text-transform:uppercase;font-weight:700;font-size:14px;letter-spacing:.06em;background:var(--black);color:#fff;padding:4px 8px}
+table.spec td{padding:5px 8px;border-bottom:1px dotted var(--rule);vertical-align:top}
+table.spec td:first-child{width:40%;color:var(--ink-2)}
+table.spec td:last-child{font-family:"Courier Prime";font-size:13.5px}
+table.spec tr.group td{background:var(--paper-2);font-family:"Barlow Condensed";text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--ink);border-bottom:1px solid var(--rule)}
+.tbc{color:#9a3b00;font-style:italic}
+.swatch{display:inline-block;width:14px;height:14px;border:1px solid #333;vertical-align:-2px;margin-right:6px;border-radius:2px}
+
+figure{margin:0 0 22px;border:1px solid var(--black);background:#fff;padding:10px 12px 8px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:13px;margin-top:6px;border-top:1px solid var(--rule);padding-top:6px}
+figcaption b{font-family:"Barlow Condensed";text-transform:uppercase;font-size:14px;letter-spacing:.04em}
+figcaption ol{margin:4px 0 0;padding-left:0;list-style:none;columns:2;column-gap:20px;font-family:"Courier Prime";font-size:12.5px;line-height:1.45}
+figcaption ol li::before{content:counter(item) "  ";counter-increment:item;font-weight:700}
+figcaption ol{counter-reset:item}
+@media (max-width:520px){figcaption ol{columns:1}}
+
+.box{border:2px solid var(--black);padding:10px 14px;margin:0 0 18px;background:#fff;position:relative}
+.box h4{font-size:15px;font-weight:800;letter-spacing:.08em;margin-bottom:4px}
+.box.note{border-color:var(--black);background:var(--paper-2)}
+.box.warning{border-color:var(--red)}
+.box.warning h4{color:var(--red)}
+.box.warning h4::before{content:"⚠ "}
+.box.caution h4::before{content:"! "}
+.box.owner{background:#fffbe6;border-style:double;border-width:4px}
+.box.owner h4::before{content:"✎ "}
+.box p{margin:0 0 6px;font-size:14px}
+.box p:last-child{margin:0}
+.box q{font-style:italic}
+
+/* contents */
+.contents ol{list-style:none;margin:0;padding:0}
+.contents li{padding:6px 0;border-bottom:1px dotted var(--rule)}
+.contents li a{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:baseline}
+.contents li .n{font-family:"Barlow Condensed";font-weight:800;font-size:22px}
+.contents li .t{font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;font-size:18px}
+.contents li .t small{display:block;font-family:"Barlow";text-transform:none;font-weight:400;font-size:13px;color:var(--ink-2)}
+.contents li .p{font-family:"Courier Prime";font-size:13px;color:var(--ink-2)}
+.contents a{text-decoration:none}
+.contents a:hover .t{text-decoration:underline}
+
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:4px;margin:14px 0 6px}
+.timeline div{background:#fff;border:1px solid var(--black);padding:6px 6px;font-family:"Courier Prime";font-size:11px;line-height:1.3;text-align:center}
+.timeline div b{display:block;font-family:"Barlow Condensed";font-size:15px;text-transform:uppercase;font-weight:700}
+.timeline div i{display:block;width:100%;height:6px;margin-top:5px;border:1px solid #333}
+
+.about{font-size:14px;color:var(--ink-2)}
+.dadwrap{max-width:var(--page-w);margin:0 auto;background:var(--black);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;color:#bbb;font-size:13px}
+.dadwrap a{color:var(--yellow);font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;font-size:15px}
+.dadwrap a:hover{text-decoration:underline}
+
+@media print{html,body{background:#fff}.page{border:0;page-break-after:always;max-width:none}.cover{page-break-after:always}}
+</style>
+</head>
+<body>
+
+<!-- =============================== COVER =============================== -->
+<header class="cover">
+  <div class="band">
+    <div class="brand">Owners Workshop Manual <small>McNEIL MOTOR CARS</small></div>
+    <div class="no">No. 1972 · 10 models</div>
+  </div>
+  <div class="title">
+    <h1><span>Stuart McNeil</span>Cars</h1>
+  </div>
+  <div class="models">Fiat 126 · Ford Fiesta · Toyota MR2 Turbo · Saab 900 · Saab 9000 Aero · Fiat 500 TwinAir · VW T25 Camper · Fiat 500 · Alfa Romeo MiTo · <b>VW Tiguan R-Line</b></div>
+  <div class="art">
+    <!-- cover art: MR2 silhouette in yellow line -->
+    <svg viewBox="0 0 960 220" role="img" aria-label="Line drawing of a Toyota MR2 on a workshop-manual cover">
+      <g fill="none" stroke="#f5c400" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M60 170 L60 140 Q62 122 92 116 L230 104 L330 62 Q352 50 386 50 L520 50 Q570 50 610 70 L720 112 L800 124 Q840 130 842 152 L842 170 Z"/>
+        <path d="M262 104 L336 62 L380 58 L380 108 Z" stroke-width="2"/>
+        <path d="M394 58 L394 108 L520 108 L548 72 L516 58 Z" stroke-width="2"/>
+        <path d="M560 74 L600 84 L664 108 L560 108 Z" stroke-width="2"/>
+        <path d="M430 46 L500 46" stroke-width="4"/>
+        <circle cx="190" cy="170" r="44"/><circle cx="190" cy="170" r="30"/><circle cx="190" cy="170" r="8"/>
+        <path d="M190 140 L190 162 M164 185 L183 175 M216 185 L197 175"/>
+        <circle cx="700" cy="170" r="48"/><circle cx="700" cy="170" r="33"/><circle cx="700" cy="170" r="8"/>
+        <path d="M700 137 L700 162 M672 187 L692 176 M728 187 L708 176"/>
+        <path d="M20 214 L940 214" stroke="#777" stroke-width="2" stroke-dasharray="6 6"/>
+      </g>
+      <text x="880" y="60" fill="#f5c400" font-family="Courier Prime, monospace" font-size="16" text-anchor="end">Fig. 0.1</text>
+    </svg>
+  </div>
+  <div class="strap">
+    <span>Owner's notes</span><span>Specifications</span><span>Line drawings</span><span>Fault finding</span><span>1990 to date</span>
+  </div>
+</header>
+
+<!-- =============================== CONTENTS =============================== -->
+<section class="page contents" data-section="Contents" data-page="Page 0•1">
+  <div class="chap-head">
+    <div class="num"><small>Section</small>0</div>
+    <h2>Contents<em>Models covered, oldest first</em></h2>
+    <div class="era">Stuart McNeil<b>1990 → 2026</b>Cardiff, Wales</div>
+  </div>
+  <div class="cols">
+    <div>
+      <ol>
+        <li><a href="#c1"><span class="n">1</span><span class="t">Fiat 126<small>Rosso — 594/652 cc, air-cooled twin</small></span><span class="p">c. 1990</span></a></li>
+        <li><a href="#c2"><span class="n">2</span><span class="t">Ford Fiesta<small>Red — N-registration, Mk4</small></span><span class="p">1995/96</span></a></li>
+        <li><a href="#c3"><span class="n">3</span><span class="t">Toyota MR2 Turbo<small>Red — SW20, T-bar, modified</small></span><span class="p">1990s</span></a></li>
+        <li><a href="#c4"><span class="n">4</span><span class="t">Saab 900<small>White — classic shape, K140 MEU</small></span><span class="p">1992/93</span></a></li>
+        <li><a href="#c5"><span class="n">5</span><span class="t">Saab 9000 Aero<small>Deep blue — M218 VCH</small></span><span class="p">1994/95</span></a></li>
+      </ol>
+    </div>
+    <div>
+      <ol>
+        <li><a href="#c6"><span class="n">6</span><span class="t">Fiat 500 Sport TwinAir<small>White — CE10 XVW</small></span><span class="p">2010</span></a></li>
+        <li><a href="#c7"><span class="n">7</span><span class="t">Volkswagen T25 Camper<small>Yellow — E431 DOD, wedge roof</small></span><span class="p">1987/88</span></a></li>
+        <li><a href="#c8"><span class="n">8</span><span class="t">Fiat 500 Sport<small>White — HG63 CYH</small></span><span class="p">2013</span></a></li>
+        <li><a href="#c9"><span class="n">9</span><span class="t">Alfa Romeo MiTo QV Line<small>Black — MC15 NNT</small></span><span class="p">2015</span></a></li>
+        <li><a href="#c10"><span class="n">10</span><span class="t">Volkswagen Tiguan R-Line<small>FH69 ZGO — current</small></span><span class="p">2019/20</span></a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec" style="margin-top:26px">
+    <h3>Fleet timeline <span>Fig. 0.2 — registration year, oldest at left. Ownership dates to be confirmed.</span></h3>
+    <div class="timeline">
+      <div><b>126</b>Fiat<i style="background:#c8102e"></i></div>
+      <div><b>Fiesta</b>Ford<i style="background:#c8102e"></i></div>
+      <div><b>MR2</b>Toyota<i style="background:#c8102e"></i></div>
+      <div><b>900</b>Saab<i style="background:#fff"></i></div>
+      <div><b>9000</b>Saab<i style="background:#1b2a5a"></i></div>
+      <div><b>500</b>Fiat<i style="background:#fff"></i></div>
+      <div><b>T25</b>VW<i style="background:#f2c230"></i></div>
+      <div><b>500</b>Fiat<i style="background:#fff"></i></div>
+      <div><b>MiTo</b>Alfa<i style="background:#111"></i></div>
+      <div><b>Tiguan</b>VW<i style="background:#888"></i></div>
+    </div>
+  </div>
+
+  <div class="box note">
+    <h4>About this manual</h4>
+    <p>This is not a real workshop manual and nothing in it should be used to fix a car. It is a record of every car I have owned, written up in the style of the manuals that lived in the glovebox of most of them. Factory figures are for the model as built and are given from memory and published sources; where a detail is uncertain it is marked <span class="tbc">to be confirmed</span>. Owner's notes are mine and are not to be taken as engineering advice.</p>
+  </div>
+</section>
+
+<!-- =============================== SVG DEFS =============================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="hatch2" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#555" stroke-width="0.6"/>
+    </pattern>
+    <symbol id="wheel" viewBox="-26 -26 52 52">
+      <circle r="25" fill="#fff" stroke="#111" stroke-width="1.6"/>
+      <circle r="21" fill="none" stroke="#111" stroke-width="1"/>
+      <circle r="15" fill="#fff" stroke="#111" stroke-width="1.4"/>
+      <circle r="4" fill="none" stroke="#111" stroke-width="1"/>
+      <g stroke="#111" stroke-width="1"><line x1="0" y1="-4" x2="0" y2="-14"/><line x1="0" y1="4" x2="0" y2="14"/><line x1="-4" y1="0" x2="-14" y2="0"/><line x1="4" y1="0" x2="14" y2="0"/><line x1="3" y1="-3" x2="10" y2="-10"/><line x1="-3" y1="3" x2="-10" y2="10"/><line x1="-3" y1="-3" x2="-10" y2="-10"/><line x1="3" y1="3" x2="10" y2="10"/></g>
+    </symbol>
+    <symbol id="wheel-steel" viewBox="-26 -26 52 52">
+      <circle r="25" fill="#fff" stroke="#111" stroke-width="1.6"/>
+      <circle r="21" fill="none" stroke="#111" stroke-width="1"/>
+      <circle r="14" fill="#fff" stroke="#111" stroke-width="1.4"/>
+      <circle r="9" fill="none" stroke="#111" stroke-width="1"/>
+      <circle r="3" fill="#111"/>
+    </symbol>
+    <symbol id="wheel-tri" viewBox="-26 -26 52 52">
+      <circle r="25" fill="#fff" stroke="#111" stroke-width="1.6"/>
+      <circle r="20" fill="none" stroke="#111" stroke-width="1"/>
+      <circle r="16" fill="#fff" stroke="#111" stroke-width="1.4"/>
+      <path d="M0 -3 L-3 -15 L3 -15 Z M-2.6 1.5 L-13 7.5 L-11 12 Z M2.6 1.5 L13 7.5 L11 12 Z" fill="#111"/>
+      <circle r="3" fill="none" stroke="#111"/>
+    </symbol>
+    <symbol id="wheel-multi" viewBox="-26 -26 52 52">
+      <circle r="25" fill="#fff" stroke="#111" stroke-width="1.6"/>
+      <circle r="21" fill="none" stroke="#111" stroke-width="1"/>
+      <circle r="17" fill="#fff" stroke="#111" stroke-width="1.4"/>
+      <g stroke="#111" stroke-width="2"><line x1="0" y1="-4" x2="0" y2="-16"/><line x1="3.8" y1="-1.2" x2="15.2" y2="-4.9"/><line x1="2.4" y1="3.2" x2="9.4" y2="12.9"/><line x1="-2.4" y1="3.2" x2="-9.4" y2="12.9"/><line x1="-3.8" y1="-1.2" x2="-15.2" y2="-4.9"/></g>
+      <circle r="4" fill="none" stroke="#111"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- =============================== CHAPTER 1: FIAT 126 =============================== -->
+<section class="page" id="c1" data-section="Chapter 1 — Fiat 126" data-page="Page 1•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>1</div>
+    <h2>Fiat 126<em>The first car · 594 / 652 cc air-cooled twin · rear engine</em></h2>
+    <div class="era">Registration<b><span class="plate unknown">not recorded</span></b>Owned c. 1990 <span class="tbc">tbc</span></div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Fiat 126">
+          <path d="M60 122 L60 102 Q60 90 70 88 L104 84 L124 60 Q130 50 146 49 L232 49 Q248 50 256 60 L272 84 L304 88 Q316 90 316 104 L316 122 Z" fill="#c8102e" fill-opacity=".12" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M150 55 L128 62 L110 84 L150 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M156 55 L156 84 L208 84 L208 55 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M214 55 L214 84 L262 84 L246 60 L236 55 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M154 84 L154 120 M210 84 L210 120" stroke="#111" stroke-width="1"/>
+          <rect x="198" y="94" width="8" height="3" fill="#111"/>
+          <circle cx="76" cy="98" r="6" fill="#fff" stroke="#111" stroke-width="1.2"/>
+          <path d="M286 96 L306 96 M286 101 L306 101 M286 106 L306 106" stroke="#111" stroke-width="1.2"/>
+          <path d="M56 116 L322 116" stroke="#111" stroke-width="2"/>
+          <use href="#wheel-steel" x="100" y="94" width="48" height="48"/>
+          <use href="#wheel-steel" x="248" y="94" width="48" height="48"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <!-- callouts -->
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="296" y1="101" x2="350" y2="70" stroke="#111"/><circle cx="356" cy="66" r="8" fill="#fff" stroke="#111"/><text x="356" y="70" text-anchor="middle">1</text>
+            <line x1="180" y1="52" x2="180" y2="28" stroke="#111"/><circle cx="180" cy="22" r="8" fill="#fff" stroke="#111"/><text x="180" y="26" text-anchor="middle">2</text>
+            <line x1="76" y1="98" x2="40" y2="70" stroke="#111"/><circle cx="34" cy="66" r="8" fill="#fff" stroke="#111"/><text x="34" y="70" text-anchor="middle">3</text>
+            <line x1="76" y1="122" x2="50" y2="150" stroke="#111"/><circle cx="44" cy="152" r="8" fill="#fff" stroke="#111"/><text x="44" y="156" text-anchor="middle">4</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 1.1</text>
+        </svg>
+        <figcaption><b>Fig. 1.1 — Fiat 126, side elevation</b>
+          <ol><li>Engine (rear, air-cooled) — cooling louvres</li><li>Roof, steel (a folding canvas roof was optional)</li><li>Headlamp, 7 in round, sealed beam</li><li>Luggage compartment — front, small</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The 126 replaced the Fiat 500 in 1972 and kept its layout: a two-cylinder, air-cooled engine slung out behind the rear axle, driving the rear wheels through a four-speed gearbox with no synchromesh on first. Early cars had 594 cc and 23 bhp; from 1977 the engine grew to 652 cc, and from 1987 the Polish-built 126 BIS gained a 704 cc water-cooled unit laid flat under the boot floor. UK cars were right-hand drive, imported in modest numbers and, by the time this one was bought, cheap.</p>
+        <p>It is a very small car. Four people fit, provided they are friends. The heater takes warm air from the engine cooling fan, which means it works only when the engine is working hard, and smells faintly of the engine bay.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 652 cc version</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#c8102e"></span>Red (Rosso)</td></tr>
+          <tr><td>Body</td><td>2-door saloon, 4 seats</td></tr>
+          <tr><td>Built</td><td>1972–1991 (Italy), –2000 (Poland)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>2-cyl in-line, air-cooled, OHV, rear-mounted</td></tr>
+          <tr><td>Capacity</td><td>594 cc (–1977) / 652 cc</td></tr>
+          <tr><td>Max power</td><td>23 bhp @ 4,800 rpm (594) / 24 bhp @ 4,500 rpm (652)</td></tr>
+          <tr><td>Max torque</td><td>approx. 31 lb ft</td></tr>
+          <tr><td>Fuel system</td><td>Single Weber 28 IMB carburettor</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>4-speed manual, rear-wheel drive</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>approx. 65 mph (105 km/h)</td></tr>
+          <tr><td>0–60 mph</td><td>not usefully measured (approx. 45 s)</td></tr>
+          <tr><td>Fuel economy</td><td>approx. 45–50 mpg</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>3,054 / 1,378 / 1,335 mm</td></tr>
+          <tr><td>Wheelbase</td><td>1,840 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 580 kg</td></tr>
+          <tr><td>Tyres</td><td>135 SR 12</td></tr>
+          <tr><td>Fuel tank</td><td>21 litres</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>Red. The first one. Two cylinders, four gears, and the beginning of a lifelong habit of small Italian engines — three of the ten cars in this manual have two cylinders.</p>
+        <p class="tbc">Year owned, engine size, how it was acquired and how it went — to be added.</p>
+      </div>
+      <div class="box caution">
+        <h4>Caution</h4>
+        <p>Engine is at the back. The "bonnet" at the front opens onto the spare wheel, the fuel tank and the battery. Do not look for the engine there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 2: FORD FIESTA =============================== -->
+<section class="page" id="c2" data-section="Chapter 2 — Ford Fiesta" data-page="Page 2•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>2</div>
+    <h2>Ford Fiesta<em>Mk4 (1995 model) · N-registration · red</em></h2>
+    <div class="era">Registration<b><span class="plate unknown">N ··· ···</span></b>First registered 1995/96 · owned <span class="tbc">tbc</span></div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Ford Fiesta Mk4">
+          <path d="M48 122 L48 104 Q49 92 64 88 L126 80 L164 56 Q172 50 186 50 L278 50 Q300 50 314 62 L340 88 Q360 92 362 106 L362 122 Z" fill="#c8102e" fill-opacity=".12" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M132 82 L166 58 L186 54 L186 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M192 54 L192 84 L248 84 L248 54 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M254 54 L254 84 L318 84 L306 62 L296 54 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M250 84 L250 120 M190 84 L190 120" stroke="#111" stroke-width="1"/>
+          <rect x="238" y="94" width="9" height="3" fill="#111"/>
+          <path d="M52 94 Q64 90 78 92 L78 100 Q64 102 52 100 Z" fill="#fff" stroke="#111" stroke-width="1.2"/>
+          <path d="M60 106 Q66 104 72 106" stroke="#111" stroke-width="1"/>
+          <path d="M44 116 L368 116" stroke="#111" stroke-width="2"/>
+          <path d="M346 92 L358 92 L358 108 L350 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <use href="#wheel-steel" x="86" y="94" width="48" height="48"/>
+          <use href="#wheel-steel" x="276" y="94" width="48" height="48"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="66" y1="96" x2="40" y2="66" stroke="#111"/><circle cx="34" cy="62" r="8" fill="#fff" stroke="#111"/><text x="34" y="66" text-anchor="middle">1</text>
+            <line x1="100" y1="84" x2="100" y2="40" stroke="#111"/><circle cx="100" cy="34" r="8" fill="#fff" stroke="#111"/><text x="100" y="38" text-anchor="middle">2</text>
+            <line x1="330" y1="76" x2="370" y2="46" stroke="#111"/><circle cx="376" cy="42" r="8" fill="#fff" stroke="#111"/><text x="376" y="46" text-anchor="middle">3</text>
+            <line x1="300" y1="126" x2="340" y2="150" stroke="#111"/><circle cx="346" cy="152" r="8" fill="#fff" stroke="#111"/><text x="346" y="156" text-anchor="middle">4</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 2.1</text>
+        </svg>
+        <figcaption><b>Fig. 2.1 — Ford Fiesta Mk4, three-door, side elevation</b>
+          <ol><li>Oval "New Edge" grille and headlamps (Mk4 identifier)</li><li>Engine, transverse, front-wheel drive</li><li>Tailgate</li><li>Steel wheel, 13 in, plastic trim</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The fourth-generation Fiesta went on sale in October 1995, at the start of the N-registration year, replacing the boxy Mk3 (which limped on as the "Fiesta Classic" until 1997). The Mk4 brought the new Zetec-SE 1.25 engine, a much better interior and, for the first time in a small Ford, a car that was pleasant to steer. It was Britain's best-selling car for most of the late nineties.</p>
+        <p>The base engines were the 1.3 Endura-E pushrod unit (60 bhp) carried over from the Mk3, and the 1.25 Zetec-SE (75 bhp). A 1.4 Zetec-SE and a 1.8 diesel were also offered.</p>
+      </div>
+      <div class="box note">
+        <h4>Identification</h4>
+        <p>An N-plate red Fiesta could be either a late Mk3 "Classic" (slotted grille, flat bonnet) or an early Mk4 (oval grille, oval lamps). The drawing shows a Mk4. <span class="tbc">Confirm which, and the engine (1.25 / 1.3 / 1.4 / 1.8D).</span></p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, Mk4 1.25 Zetec-SE unless stated</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#c8102e"></span>Red (Radiant Red)</td></tr>
+          <tr><td>Body</td><td>3- or 5-door hatchback <span class="tbc">tbc</span></td></tr>
+          <tr><td>Built</td><td>1995–2002 (Dagenham / Cologne / Valencia)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>4-cyl in-line, DOHC 16v, transverse (Zetec-SE)</td></tr>
+          <tr><td>Capacity</td><td>1,242 cc</td></tr>
+          <tr><td>Max power</td><td>75 bhp @ 5,200 rpm (1.3 Endura-E: 60 bhp)</td></tr>
+          <tr><td>Max torque</td><td>81 lb ft @ 4,000 rpm</td></tr>
+          <tr><td>Fuel system</td><td>Multi-point electronic fuel injection</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>5-speed manual (IB5), front-wheel drive</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>approx. 103 mph</td></tr>
+          <tr><td>0–60 mph</td><td>approx. 12.5 s</td></tr>
+          <tr><td>Fuel economy</td><td>approx. 42 mpg combined</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>3,828 / 1,634 / 1,320 mm</td></tr>
+          <tr><td>Wheelbase</td><td>2,446 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 935 kg</td></tr>
+          <tr><td>Tyres</td><td>165/70 R13</td></tr>
+          <tr><td>Fuel tank</td><td>42 litres</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>Red again. The sensible one between two cars that weren't.</p>
+        <p class="tbc">Stories, how long it lasted and what came of it — to be added.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 3: TOYOTA MR2 =============================== -->
+<section class="page" id="c3" data-section="Chapter 3 — Toyota MR2 Turbo" data-page="Page 3•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>3</div>
+    <h2>Toyota MR2 Turbo<em>Mk2 (SW20) · mid-engine · T-bar roof · red · modified</em></h2>
+    <div class="era">Registration<b><span class="plate unknown">not recorded</span></b>Owned 1990s <span class="tbc">tbc</span></div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a lowered Toyota MR2 Turbo with T-bar roof">
+          <path d="M36 124 L36 108 Q37 98 52 94 L120 88 L166 66 Q176 60 192 60 L242 60 Q266 60 288 70 L334 90 L364 96 Q380 100 380 112 L380 124 Z" fill="#c8102e" fill-opacity=".12" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M138 88 L168 68 L190 64 L190 90 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M196 64 L196 90 L250 90 L266 72 L250 64 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M270 74 L292 78 L322 90 L272 90 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <rect x="206" y="57" width="30" height="4" fill="#fff" stroke="#111" stroke-width="1"/>
+          <path d="M194 90 L194 122 M252 90 L252 122" stroke="#111" stroke-width="1"/>
+          <rect x="240" y="100" width="9" height="3" fill="#111"/>
+          <path d="M54 96 L84 94 L84 100 L54 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <path d="M300 96 L300 112 M310 96 L310 112 M320 98 L320 112" stroke="#111" stroke-width="1"/>
+          <path d="M340 104 L372 104" stroke="#111" stroke-width="1"/>
+          <path d="M32 118 L386 118" stroke="#111" stroke-width="2"/>
+          <path d="M30 124 L120 124 M290 124 L386 124" stroke="#111" stroke-width="2.5"/>
+          <use href="#wheel-tri" x="78" y="98" width="44" height="44"/>
+          <use href="#wheel-tri" x="296" y="94" width="50" height="50"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="310" y1="104" x2="370" y2="60" stroke="#111"/><circle cx="376" cy="56" r="8" fill="#fff" stroke="#111"/><text x="376" y="60" text-anchor="middle">1</text>
+            <line x1="221" y1="57" x2="221" y2="30" stroke="#111"/><circle cx="221" cy="24" r="8" fill="#fff" stroke="#111"/><text x="221" y="28" text-anchor="middle">2</text>
+            <line x1="321" y1="132" x2="360" y2="150" stroke="#111"/><circle cx="366" cy="152" r="8" fill="#fff" stroke="#111"/><text x="366" y="156" text-anchor="middle">3</text>
+            <line x1="60" y1="130" x2="40" y2="150" stroke="#111"/><circle cx="34" cy="152" r="8" fill="#fff" stroke="#111"/><text x="34" y="156" text-anchor="middle">4</text>
+            <line x1="222" y1="78" x2="140" y2="30" stroke="#111"/><circle cx="134" cy="26" r="8" fill="#fff" stroke="#111"/><text x="134" y="30" text-anchor="middle">5</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 3.1</text>
+        </svg>
+        <figcaption><b>Fig. 3.1 — Toyota MR2 Turbo (SW20), side elevation, as modified</b>
+          <ol><li>Engine, 3S-GTE turbo, transverse, behind the seats</li><li>T-bar roof, two removable glass panels</li><li>Rear wheel, tri-spoke, wide section — oversize</li><li>Lowered suspension, race-type; ride height reduced</li><li>Bucket seats (fixed-back)</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The second-generation MR2 arrived in 1989 as a bigger, softer-looking car than the wedge-shaped original, with a mid-mounted transverse engine, rear-wheel drive and, in Turbo form, the 2.0-litre 3S-GTE from the Celica GT-Four. Toyota GB never officially sold the Turbo, so almost every one in Britain is a Japanese-market import. Early "Revision 1" cars had a reputation for snap oversteer, which Toyota addressed from 1992 with wider rear tyres and revised suspension geometry — a fix that a set of even wider rear tyres and lowered springs will cheerfully undo.</p>
+        <p>The T-bar roof, standard on most imports, gives two lift-out glass panels that stow behind the seats.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 3S-GTE</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#c8102e"></span>Red (Super Red)</td></tr>
+          <tr><td>Body</td><td>2-door coupé, T-bar roof, 2 seats</td></tr>
+          <tr><td>Built</td><td>1989–1999 (Japan)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>4-cyl in-line, DOHC 16v, turbocharged &amp; intercooled, transverse mid-mounted</td></tr>
+          <tr><td>Capacity</td><td>1,998 cc</td></tr>
+          <tr><td>Max power</td><td>221 bhp (Rev 1–2) / 242 bhp (Rev 3 on, 1993+)</td></tr>
+          <tr><td>Max torque</td><td>200–224 lb ft</td></tr>
+          <tr><td>Turbocharger</td><td>Toyota CT26 (later CT20b)</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>5-speed manual (E153), rear-wheel drive, LSD</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>approx. 150 mph</td></tr>
+          <tr><td>0–60 mph</td><td>approx. 6.0 s</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>4,170 / 1,695 / 1,235 mm (factory height)</td></tr>
+          <tr><td>Wheelbase</td><td>2,400 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 1,250 kg</td></tr>
+          <tr><td>Tyres (factory)</td><td>195/55 R15 front, 225/50 R15 rear</td></tr>
+          <tr class="group"><td colspan="2">Modifications (as owned)</td></tr>
+          <tr><td>Wheels</td><td>Tri-spoke alloys; very wide rears</td></tr>
+          <tr><td>Tyres</td><td>Low profile</td></tr>
+          <tr><td>Suspension</td><td>Lowered, race-type</td></tr>
+          <tr><td>Seats</td><td>Bucket seats</td></tr>
+          <tr><td>Comfort</td><td>None</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>T-bar roof. Lowered, with tri-spoke wheels and huge wide wheels on the rear, bucket seats, low-profile tyres and racing suspension. <q>Very lively back end. Very uncomfortable.</q></p>
+      </div>
+      <div class="box warning">
+        <h4>Warning</h4>
+        <p>Lift-off oversteer. Do not lift off mid-corner. If the rear steps out, it will not step back in of its own accord. This applies twice with the modifications listed above.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 4: SAAB 900 =============================== -->
+<section class="page" id="c4" data-section="Chapter 4 — Saab 900" data-page="Page 4•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>4</div>
+    <h2>Saab 900<em>Classic (pre-GM) · 2.0 16-valve, non-turbo · white</em></h2>
+    <div class="era">Registration<b><span class="plate">K140 MEU</span></b>First registered 1992/93 · owned <span class="tbc">tbc</span></div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a classic Saab 900 hatchback">
+          <path d="M28 122 L28 104 Q28 92 44 88 L100 84 L150 78 L184 56 Q192 50 206 50 L276 50 Q292 50 300 56 L332 82 L368 88 Q386 92 388 108 L388 122 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M156 80 Q172 60 190 55 L208 52 L208 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M214 52 L214 84 L268 84 L268 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M274 52 L274 84 L336 84 L302 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M212 84 L212 120 M270 84 L270 120" stroke="#111" stroke-width="1"/>
+          <rect x="258" y="94" width="9" height="3" fill="#111"/>
+          <path d="M34 94 L60 92 L60 100 L34 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <path d="M40 88 L150 78" stroke="#111" stroke-width="1"/>
+          <path d="M24 116 L392 116" stroke="#111" stroke-width="2"/>
+          <path d="M372 92 L384 92 L384 108 L376 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <use href="#wheel-multi" x="84" y="94" width="48" height="48"/>
+          <use href="#wheel-multi" x="296" y="94" width="48" height="48"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="176" y1="66" x2="150" y2="30" stroke="#111"/><circle cx="146" cy="24" r="8" fill="#fff" stroke="#111"/><text x="146" y="28" text-anchor="middle">1</text>
+            <line x1="80" y1="84" x2="60" y2="50" stroke="#111"/><circle cx="56" cy="44" r="8" fill="#fff" stroke="#111"/><text x="56" y="48" text-anchor="middle">2</text>
+            <line x1="320" y1="70" x2="356" y2="40" stroke="#111"/><circle cx="362" cy="36" r="8" fill="#fff" stroke="#111"/><text x="362" y="40" text-anchor="middle">3</text>
+            <line x1="46" y1="98" x2="26" y2="70" stroke="#111"/><circle cx="20" cy="66" r="8" fill="#fff" stroke="#111"/><text x="20" y="70" text-anchor="middle">4</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 4.1</text>
+        </svg>
+        <figcaption><b>Fig. 4.1 — Saab 900 (classic), three-door hatchback, side elevation</b>
+          <ol><li>Windscreen, deeply curved, aircraft-style — the "boat" screen</li><li>Bonnet, clamshell, front-hinged; engine installed "backwards" with gearbox beneath</li><li>Hatchback tailgate</li><li>Headlamp with wiper</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The 900 was Saab's aeroplane-company idea of a car, built from 1978 to 1993 on an evolution of the 99. The deeply curved windscreen and forward-hinged clamshell bonnet came from a company that also made jets, as did the ignition key between the seats, the heated seats, the headlamp wipers and the obsessive crash structure. The engine — a slant-four derived from the old Triumph unit — sits back-to-front with the gearbox underneath it, driving the front wheels.</p>
+        <p>By the K-registration year the classic 900 was in its last months; the GM-based "new generation" 900 replaced it in late 1993. Non-turbo 16-valve cars (the 900i 16) had 128 bhp and, with the long-throw five-speed, a distinctive throaty note.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 900i 16-valve</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#fff"></span>White</td></tr>
+          <tr><td>Body</td><td>3-door hatchback (assumed) <span class="tbc">tbc</span>, 5 seats</td></tr>
+          <tr><td>Built</td><td>1978–1993 (Trollhättan, Sweden)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>4-cyl in-line, DOHC 16v (B202), longitudinal, front</td></tr>
+          <tr><td>Capacity</td><td>1,985 cc</td></tr>
+          <tr><td>Max power</td><td>128 bhp @ 5,500 rpm</td></tr>
+          <tr><td>Max torque</td><td>128 lb ft @ 3,000 rpm</td></tr>
+          <tr><td>Fuel system</td><td>Bosch LH-Jetronic fuel injection</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>5-speed manual, front-wheel drive</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>approx. 118 mph</td></tr>
+          <tr><td>0–60 mph</td><td>approx. 10.5 s</td></tr>
+          <tr><td>Fuel economy</td><td>approx. 30 mpg</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>4,739 / 1,690 / 1,420 mm</td></tr>
+          <tr><td>Wheelbase</td><td>2,517 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 1,230 kg</td></tr>
+          <tr><td>Tyres</td><td>185/65 R15</td></tr>
+          <tr><td>Fuel tank</td><td>63 litres</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p><q>Made a fabulous sound.</q> Hydraulic air vents. Boat-like windscreen. <q>It was a comfortable tank. Loved it.</q></p>
+      </div>
+      <div class="box note">
+        <h4>Note</h4>
+        <p>Ignition switch is on the floor between the front seats. The key cannot be removed unless the gearbox is in reverse. This is a feature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 5: SAAB 9000 AERO =============================== -->
+<section class="page" id="c5" data-section="Chapter 5 — Saab 9000 Aero" data-page="Page 5•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>5</div>
+    <h2>Saab 9000 Aero<em>CS body · turbo · deep blue · heated leather bucket seats</em></h2>
+    <div class="era">Registration<b><span class="plate">M218 VCH</span></b>First registered 1994/95 · owned <span class="tbc">tbc</span></div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Saab 9000 Aero">
+          <path d="M22 122 L22 104 Q22 92 40 88 L134 80 L168 56 Q178 50 194 50 L286 50 Q306 50 318 58 L352 82 L378 86 Q394 90 396 106 L396 122 Z" fill="#1b2a5a" fill-opacity=".15" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M142 82 L170 58 L192 54 L192 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M198 54 L198 84 L254 84 L254 54 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M260 54 L260 84 L328 84 L314 66 L300 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M196 84 L196 120 M256 84 L256 120" stroke="#111" stroke-width="1"/>
+          <rect x="244" y="94" width="9" height="3" fill="#111"/><rect x="304" y="94" width="9" height="3" fill="#111"/>
+          <path d="M28 94 L56 92 L56 100 L28 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <path d="M22 108 L396 108" stroke="#111" stroke-width="1"/>
+          <path d="M18 118 L400 118" stroke="#111" stroke-width="2"/>
+          <path d="M22 122 L400 122" stroke="#111" stroke-width="2.5"/>
+          <path d="M380 92 L392 92 L392 106 L384 106 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <use href="#wheel-multi" x="80" y="94" width="48" height="48"/>
+          <use href="#wheel-multi" x="298" y="94" width="48" height="48"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="90" y1="84" x2="70" y2="46" stroke="#111"/><circle cx="66" cy="40" r="8" fill="#fff" stroke="#111"/><text x="66" y="44" text-anchor="middle">1</text>
+            <line x1="226" y1="76" x2="226" y2="30" stroke="#111"/><circle cx="226" cy="24" r="8" fill="#fff" stroke="#111"/><text x="226" y="28" text-anchor="middle">2</text>
+            <line x1="200" y1="122" x2="200" y2="150" stroke="#111"/><circle cx="200" cy="152" r="8" fill="#fff" stroke="#111"/><text x="200" y="156" text-anchor="middle">3</text>
+            <line x1="340" y1="72" x2="372" y2="40" stroke="#111"/><circle cx="378" cy="36" r="8" fill="#fff" stroke="#111"/><text x="378" y="40" text-anchor="middle">4</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 5.1</text>
+        </svg>
+        <figcaption><b>Fig. 5.1 — Saab 9000 Aero (CS), five-door, side elevation</b>
+          <ol><li>Engine, turbo, transverse, front-wheel drive</li><li>Front seats — leather, heated, sports (Recaro-type) with adjustable bolsters</li><li>Aero body kit: deep sills and bumpers</li><li>Tailgate with spoiler</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The 9000 was Saab's big car, sharing its platform with the Fiat Croma, Lancia Thema and Alfa 164 but sharing almost nothing you could see. The CS hatchback body of 1992 tidied the nose and tail; the Aero of 1993 added the full-pressure 2.3 turbo, a five-speed box, sports suspension, a body kit and the seats — big leather sports chairs with heating and inflatable side bolsters that were, for many years, the best in any car.</p>
+        <p>The UK Aero was sold with the 2.3-litre B234R engine at 225 bhp (200 with the automatic). A 2.0-litre turbo Aero was built for Italy and other tax-sensitive markets.</p>
+      </div>
+      <div class="box note">
+        <h4>Identification</h4>
+        <p>Remembered as a 2.0-litre. UK-market Aeros were 2.3-litre; a 2.0 turbo would normally be a CS/CSE, or an imported Italian-spec Aero. <span class="tbc">Confirm 2.0 or 2.3, manual or automatic.</span> Specifications below are for the 2.3 Aero, with the 2.0 turbo figure noted.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 9000 Aero 2.3 manual</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#1b2a5a"></span>Deep blue (Scarabe / Imola Blue)</td></tr>
+          <tr><td>Body</td><td>5-door hatchback, 5 seats</td></tr>
+          <tr><td>Built</td><td>1993–1997 (Trollhättan)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>4-cyl in-line, DOHC 16v, turbo &amp; intercooled, transverse (B234R)</td></tr>
+          <tr><td>Capacity</td><td>2,290 cc (2.0 turbo: 1,985 cc)</td></tr>
+          <tr><td>Max power</td><td>225 bhp @ 5,500 rpm (2.0T: approx. 150–185 bhp)</td></tr>
+          <tr><td>Max torque</td><td>258 lb ft @ 1,950 rpm</td></tr>
+          <tr><td>Engine management</td><td>Saab Trionic</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>5-speed manual (or 4-speed auto), front-wheel drive</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>approx. 150 mph</td></tr>
+          <tr><td>0–60 mph</td><td>approx. 6.9 s (manual)</td></tr>
+          <tr><td>Fuel economy</td><td>approx. 28 mpg</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>4,761 / 1,764 / 1,420 mm</td></tr>
+          <tr><td>Wheelbase</td><td>2,672 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 1,480 kg</td></tr>
+          <tr><td>Tyres</td><td>205/55 ZR16 (Super Aero alloys)</td></tr>
+          <tr><td>Fuel tank</td><td>66 litres</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p><q>A beauty. Amazing heated leather bucket seats.</q> Two Saabs in a row and no regrets about either: <q>Saab make lovely cars.</q></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 6: FIAT 500 TWINAIR =============================== -->
+<section class="page" id="c6" data-section="Chapter 6 — Fiat 500 Sport TwinAir" data-page="Page 6•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>6</div>
+    <h2>Fiat 500 Sport<em>0.9 TwinAir · 875 cc two-cylinder turbo · white, black interior</em></h2>
+    <div class="era">Registration<b><span class="plate">CE10 XVW</span></b>First registered 2010 (Cardiff) · owned c. 2010–2013</div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Fiat 500">
+          <path d="M84 122 L84 104 Q84 90 98 86 Q110 62 136 53 Q166 44 210 44 Q250 44 274 52 Q300 62 308 88 Q324 92 326 108 L326 122 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M120 84 Q132 62 154 55 L182 52 L182 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M188 52 L188 84 L242 84 L242 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M248 52 L248 84 L292 84 Q292 66 272 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M186 84 L186 120 M244 84 L244 120" stroke="#111" stroke-width="1"/>
+          <rect x="232" y="94" width="9" height="3" fill="#111"/>
+          <circle cx="102" cy="92" r="7" fill="#fff" stroke="#111" stroke-width="1.2"/>
+          <circle cx="98" cy="106" r="3" fill="none" stroke="#111"/>
+          <path d="M80 116 L332 116" stroke="#111" stroke-width="2"/>
+          <path d="M312 92 L322 92 L322 108 L316 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <use href="#wheel-multi" x="112" y="94" width="48" height="48"/>
+          <use href="#wheel-multi" x="254" y="94" width="48" height="48"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="112" y1="80" x2="70" y2="50" stroke="#111"/><circle cx="64" cy="46" r="8" fill="#fff" stroke="#111"/><text x="64" y="50" text-anchor="middle">1</text>
+            <line x1="102" y1="92" x2="60" y2="100" stroke="#111"/><circle cx="52" cy="100" r="8" fill="#fff" stroke="#111"/><text x="52" y="104" text-anchor="middle">2</text>
+            <line x1="210" y1="44" x2="210" y2="22" stroke="#111"/><circle cx="210" cy="16" r="8" fill="#fff" stroke="#111"/><text x="210" y="20" text-anchor="middle">3</text>
+            <line x1="215" y1="100" x2="215" y2="150" stroke="#111"/><circle cx="215" cy="152" r="8" fill="#fff" stroke="#111"/><text x="215" y="156" text-anchor="middle">4</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 6.1</text>
+        </svg>
+        <figcaption><b>Fig. 6.1 — Fiat 500 (2007 type), three-door, side elevation</b>
+          <ol><li>Engine, 875 cc TwinAir, transverse, turbocharged, MultiAir valve control</li><li>Headlamp, round, with separate indicator below</li><li>Roof — Sport had a fixed roof; glass sunroof optional</li><li>Interior: black (Sport cloth/leather trim)</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The 2007 500 revived the 1957 shape on the Panda platform, built in Tychy, Poland — the same factory that turned out the 126 for two decades. In 2010 Fiat fitted it with the TwinAir: a two-cylinder, 875 cc turbocharged engine with hydraulically operated inlet valves (MultiAir) that made 85 bhp, weighed almost nothing and sounded like a cheerful lawnmower. Fiat quoted 68 mpg, which nobody has ever seen. It won International Engine of the Year in 2011.</p>
+        <p>The Sport added 16-inch alloys, a rear spoiler, side skirts, sports seats and a leather steering wheel.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 0.9 TwinAir 85</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#fff"></span>White (Bossa Nova White) · black interior</td></tr>
+          <tr><td>Body</td><td>3-door hatchback, 4 seats</td></tr>
+          <tr><td>Built</td><td>2007–2024 (Tychy, Poland)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>2-cyl in-line, SOHC 8v MultiAir, turbocharged, transverse</td></tr>
+          <tr><td>Capacity</td><td>875 cc</td></tr>
+          <tr><td>Max power</td><td>85 bhp @ 5,500 rpm</td></tr>
+          <tr><td>Max torque</td><td>107 lb ft @ 1,900 rpm</td></tr>
+          <tr><td>Fuel system</td><td>Multi-point injection, IHI turbocharger</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>5-speed manual, front-wheel drive</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>108 mph</td></tr>
+          <tr><td>0–62 mph</td><td>11.0 s</td></tr>
+          <tr><td>Fuel economy</td><td>68.9 mpg claimed; 40-something in practice</td></tr>
+          <tr><td>CO₂</td><td>95 g/km (tax-free at the time)</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>3,546 / 1,627 / 1,488 mm</td></tr>
+          <tr><td>Wheelbase</td><td>2,300 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 930 kg</td></tr>
+          <tr><td>Tyres</td><td>195/45 R16</td></tr>
+          <tr><td>Fuel tank</td><td>35 litres</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>The 900 cc version. <q>Super light, with a turbo. Fast as.</q> White with a black interior — the first of two identical ones.</p>
+      </div>
+      <div class="box note">
+        <h4>Note</h4>
+        <p>Cross-reference Chapter 1. Two cylinders, made in the same Polish factory, 20 years apart: 24 bhp then, 85 bhp now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 7: VW T25 =============================== -->
+<section class="page" id="c7" data-section="Chapter 7 — Volkswagen T25 Camper" data-page="Page 7•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>7</div>
+    <h2>Volkswagen T25 Camper<em>Water-cooled · wedge pop-top · yellow &amp; white · concurrent vehicle</em></h2>
+    <div class="era">Registration<b><span class="plate">E431 DOD</span></b>First registered 1987/88 · owned alongside Ch. 6 &amp; 8, later sold</div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 180" role="img" aria-label="Side elevation line drawing of a VW T25 camper van with the wedge roof raised">
+          <!-- raised wedge roof -->
+          <path d="M100 62 L106 22 L344 14 L350 62 Z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M104 62 L106 22 L344 14 L348 40 L110 50 Z" fill="url(#hatch2)" stroke="none"/>
+          <path d="M110 50 L348 40" stroke="#111" stroke-width="1"/>
+          <!-- body -->
+          <path d="M40 132 L40 78 Q40 62 58 62 L342 62 Q368 62 372 84 L376 132 Z" fill="#f2c230" fill-opacity=".28" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M40 104 L376 104" stroke="#111" stroke-width="1"/>
+          <path d="M46 68 L46 100 L104 100 L104 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M112 68 L112 100 L178 100 L178 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M186 68 L186 100 L284 100 L284 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M292 68 L292 100 L360 100 L360 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M110 64 L110 130 M184 64 L184 130 M286 64 L286 130" stroke="#111" stroke-width="1"/>
+          <rect x="120" y="110" width="9" height="3" fill="#111"/><rect x="192" y="110" width="9" height="3" fill="#111"/>
+          <rect x="44" y="110" width="12" height="9" fill="#fff" stroke="#111"/>
+          <path d="M340 118 L366 118 M340 123 L366 123 M340 128 L366 128" stroke="#111" stroke-width="1.2"/>
+          <path d="M36 132 L380 132" stroke="#111" stroke-width="2"/>
+          <use href="#wheel-steel" x="72" y="108" width="50" height="50"/>
+          <use href="#wheel-steel" x="284" y="108" width="50" height="50"/>
+          <path d="M20 158 L400 158" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="353" y1="123" x2="392" y2="100" stroke="#111"/><circle cx="398" cy="96" r="8" fill="#fff" stroke="#111"/><text x="398" y="100" text-anchor="middle">1</text>
+            <line x1="230" y1="30" x2="230" y2="10" stroke="#111"/><circle cx="236" cy="8" r="8" fill="#fff" stroke="#111"/><text x="236" y="12" text-anchor="middle">2</text>
+            <line x1="235" y1="118" x2="235" y2="166" stroke="#111"/><circle cx="235" cy="170" r="8" fill="#fff" stroke="#111"/><text x="235" y="174" text-anchor="middle">3</text>
+            <line x1="46" y1="72" x2="26" y2="46" stroke="#111"/><circle cx="20" cy="42" r="8" fill="#fff" stroke="#111"/><text x="20" y="46" text-anchor="middle">4</text>
+            <line x1="330" y1="82" x2="392" y2="50" stroke="#111"/><circle cx="398" cy="46" r="8" fill="#fff" stroke="#111"/><text x="398" y="50" text-anchor="middle">5</text>
+          </g>
+          <text x="410" y="176" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 7.1</text>
+        </svg>
+        <figcaption><b>Fig. 7.1 — Volkswagen T25 (Type 2 T3) camper, side elevation, roof raised</b>
+          <ol><li>Engine, flat-four "wasserboxer", water-cooled, rear-mounted; radiator at front</li><li>Elevating "wedge" roof, white GRP, canvas sides — standing room in the rear</li><li>Sliding side door</li><li>Windscreen, flat, huge; driver sits over the front axle</li><li>Kitchen unit: two-ring hob, sink, fridge (behind sliding door)</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The third-generation Transporter (T25 in Britain, T3 elsewhere) ran from 1979 to 1992, the last VW van with the engine in the back. From 1982 the air-cooled flat-four gave way to the water-cooled "wasserboxer" — the same layout, now with coolant, a radiator at the front and a long run of pipework in between. The 1.9 (DG) gave 78 bhp; the 2.1 injection (DJ) 112 bhp. Either way the van is slow, the driver sits over the front wheels with the pedals ahead of the axle, and the noise comes from behind.</p>
+        <p>An elevating wedge roof (Devon, Autohomes and others) hinges at the front and lifts at the rear, giving standing height for cooking and, in the better ones, a bunk in the roof.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 1.9 wasserboxer (2.1 in brackets)</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#f2c230"></span>Yellow, with <span class="swatch" style="background:#fff"></span>white elevating roof</td></tr>
+          <tr><td>Body</td><td>Campervan conversion, wedge pop-top; converter <span class="tbc">tbc</span></td></tr>
+          <tr><td>Built</td><td>1979–1992 (Hanover); this one 1987/88</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>Flat-four, water-cooled, OHV, rear-mounted</td></tr>
+          <tr><td>Capacity</td><td>1,913 cc (2,109 cc)</td></tr>
+          <tr><td>Max power</td><td>78 bhp @ 4,600 rpm (112 bhp @ 4,800 rpm)</td></tr>
+          <tr><td>Max torque</td><td>103 lb ft (128 lb ft)</td></tr>
+          <tr><td>Fuel system</td><td>Carburettor (Digijet injection)</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>4-speed manual (or 3-speed auto), rear-wheel drive</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>approx. 75 mph (never attempted)</td></tr>
+          <tr><td>Cruising speed</td><td>50 mph, by preference</td></tr>
+          <tr><td>0–60 mph</td><td>approx. 25 s</td></tr>
+          <tr><td>Fuel economy</td><td>approx. 22–25 mpg</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>4,570 / 1,845 / approx. 2,100 mm (roof down)</td></tr>
+          <tr><td>Wheelbase</td><td>2,460 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 1,650 kg (camper)</td></tr>
+          <tr><td>Tyres</td><td>185 R14 C</td></tr>
+          <tr><td>Fuel tank</td><td>60 litres</td></tr>
+          <tr><td>Berths</td><td>2 + 2 (roof bunk)</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>A proper campervan, bought as an addition rather than a replacement. <q>Slow — never loved travelling at more than 50 mph.</q> Yellow with a white wedge roof, so you could stand up in the back and make a cup of tea or food. <q>Many fun escapes, almost as many breakdowns.</q> Sold when the MiTo arrived.</p>
+      </div>
+      <div class="box warning">
+        <h4>Fault finding</h4>
+        <p><b>Symptom:</b> Van stops. <b>Likely causes:</b> coolant hose (several metres of them), head gasket (wasserboxer, weeps), fuel pump, earth strap, thirty-year-old wiring. <b>Remedy:</b> put the kettle on. You have the equipment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 8: FIAT 500 (2) =============================== -->
+<section class="page" id="c8" data-section="Chapter 8 — Fiat 500 Sport (II)" data-page="Page 8•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>8</div>
+    <h2>Fiat 500 Sport (II)<em>Second of the pair · white, black interior · replaced Ch. 6</em></h2>
+    <div class="era">Registration<b><span class="plate">HG63 CYH</span></b>First registered late 2013 · owned c. 2013–2015</div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Fiat 500, second example">
+          <path d="M84 122 L84 104 Q84 90 98 86 Q110 62 136 53 Q166 44 210 44 Q250 44 274 52 Q300 62 308 88 Q324 92 326 108 L326 122 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M120 84 Q132 62 154 55 L182 52 L182 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M188 52 L188 84 L242 84 L242 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M248 52 L248 84 L292 84 Q292 66 272 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M186 84 L186 120 M244 84 L244 120" stroke="#111" stroke-width="1"/>
+          <rect x="232" y="94" width="9" height="3" fill="#111"/>
+          <circle cx="102" cy="92" r="7" fill="#fff" stroke="#111" stroke-width="1.2"/>
+          <circle cx="98" cy="106" r="3" fill="none" stroke="#111"/>
+          <path d="M80 116 L332 116" stroke="#111" stroke-width="2"/>
+          <path d="M312 92 L322 92 L322 108 L316 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <use href="#wheel-multi" x="112" y="94" width="48" height="48"/>
+          <use href="#wheel-multi" x="254" y="94" width="48" height="48"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="112" y1="80" x2="70" y2="50" stroke="#111"/><circle cx="64" cy="46" r="8" fill="#fff" stroke="#111"/><text x="64" y="50" text-anchor="middle">1</text>
+            <line x1="300" y1="80" x2="350" y2="50" stroke="#111"/><circle cx="356" cy="46" r="8" fill="#fff" stroke="#111"/><text x="356" y="50" text-anchor="middle">2</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 8.1</text>
+        </svg>
+        <figcaption><b>Fig. 8.1 — Fiat 500 (2007 type), second example — refer to Fig. 6.1 for full key</b>
+          <ol><li>Engine, transverse — TwinAir 0.9 or 1.2 8v <span class="tbc">tbc</span></li><li>Rear spoiler (Sport)</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>Identical in almost every respect to Chapter 6, three years newer. Whatever the first one had done right, the second was bought to carry on doing. Between 2010 and 2013 the 500 gained a mild interior update and a 105 bhp version of the TwinAir; the 85 continued alongside the 1.2 8-valve.</p>
+        <p>This is the point in the manual where the fleet briefly reaches two vehicles: the 500 for the week and the T25 (Chapter 7) for the weekends.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>as Chapter 6 unless stated</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#fff"></span>White · black interior</td></tr>
+          <tr><td>Body</td><td>3-door hatchback, 4 seats</td></tr>
+          <tr><td>Model year</td><td>2013 (63-plate, Sept 2013 – Feb 2014)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>TwinAir 875 cc turbo (assumed) — or 1.2 8v, 69 bhp <span class="tbc">tbc</span></td></tr>
+          <tr><td>Max power</td><td>85 bhp (TwinAir 85) / 105 bhp (TwinAir 105) / 69 bhp (1.2)</td></tr>
+          <tr class="group"><td colspan="2">Performance (TwinAir 85)</td></tr>
+          <tr><td>Top speed</td><td>108 mph</td></tr>
+          <tr><td>0–62 mph</td><td>11.0 s</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>3,546 / 1,627 / 1,488 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 930 kg</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>Same again: white, black interior, Sport. <span class="tbc">Engine, and why the swap — to be added.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 9: ALFA MITO =============================== -->
+<section class="page" id="c9" data-section="Chapter 9 — Alfa Romeo MiTo" data-page="Page 9•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>9</div>
+    <h2>Alfa Romeo MiTo QV Line<em>0.9 TwinAir 105 · black · Quadrifoglio body kit</em></h2>
+    <div class="era">Registration<b><span class="plate">MC15 NNT</span></b>First registered 2015 · owned c. 2015–2019/20</div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of an Alfa Romeo MiTo">
+          <path d="M52 122 L52 106 Q52 92 70 86 L136 80 L170 58 Q178 52 194 52 L272 52 Q294 52 310 62 L340 84 Q358 90 360 106 L360 122 Z" fill="#111" fill-opacity=".14" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M142 82 L172 60 L192 56 L192 86 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M198 56 L198 84 L258 82 L258 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M264 56 L264 80 L322 78 L302 60 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M196 86 L196 120" stroke="#111" stroke-width="1"/>
+          <path d="M250 96 L262 94" stroke="#111" stroke-width="3"/>
+          <path d="M56 90 Q76 86 92 90 L88 100 L60 102 Z" fill="#fff" stroke="#111" stroke-width="1.2"/>
+          <path d="M54 108 L64 106 L62 114 Z" fill="#111"/>
+          <path d="M70 110 L330 100" stroke="#111" stroke-width="1"/>
+          <path d="M48 118 L364 118" stroke="#111" stroke-width="2"/>
+          <path d="M48 122 L364 122" stroke="#111" stroke-width="2.5"/>
+          <path d="M340 90 L354 90 L354 106 L346 106 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <use href="#wheel-multi" x="80" y="92" width="52" height="52"/>
+          <use href="#wheel-multi" x="280" y="92" width="52" height="52"/>
+          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="100" y1="84" x2="80" y2="46" stroke="#111"/><circle cx="76" cy="40" r="8" fill="#fff" stroke="#111"/><text x="76" y="44" text-anchor="middle">1</text>
+            <line x1="58" y1="110" x2="30" y2="80" stroke="#111"/><circle cx="24" cy="76" r="8" fill="#fff" stroke="#111"/><text x="24" y="80" text-anchor="middle">2</text>
+            <line x1="256" y1="95" x2="256" y2="150" stroke="#111"/><circle cx="256" cy="152" r="8" fill="#fff" stroke="#111"/><text x="256" y="156" text-anchor="middle">3</text>
+            <line x1="106" y1="132" x2="140" y2="150" stroke="#111"/><circle cx="146" cy="152" r="8" fill="#fff" stroke="#111"/><text x="146" y="156" text-anchor="middle">4</text>
+          </g>
+          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 9.1</text>
+        </svg>
+        <figcaption><b>Fig. 9.1 — Alfa Romeo MiTo (955), three-door, side elevation</b>
+          <ol><li>Engine, 875 cc TwinAir 105, transverse</li><li>Scudetto (shield) grille and front splitter, QV Line</li><li>Hidden rear door handle — the MiTo is 3-door only</li><li>Alloy wheel, 18 in, QV Line</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>Alfa's supermini, built from 2008 to 2018 in Turin on the Grande Punto platform and styled after the 8C Competizione. The TwinAir in MiTo form was tuned to 105 bhp and paired with a six-speed gearbox; Alfa's DNA switch changes throttle, steering weight and stability control between Dynamic, Normal and All-weather. The QV Line (2014 on) borrowed the look of the Quadrifoglio Verde — body kit, 18-inch wheels, sports seats, dark trim — without its 1.4 turbo.</p>
+        <p>Third two-cylinder Fiat-group car in this manual, and the fastest of them.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 0.9 TwinAir 105</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#111"></span>Black (Nero Etna)</td></tr>
+          <tr><td>Body</td><td>3-door hatchback, 4 seats</td></tr>
+          <tr><td>Built</td><td>2008–2018 (Mirafiori, Turin)</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>2-cyl in-line, SOHC 8v MultiAir, turbocharged, transverse</td></tr>
+          <tr><td>Capacity</td><td>875 cc</td></tr>
+          <tr><td>Max power</td><td>105 bhp @ 5,500 rpm</td></tr>
+          <tr><td>Max torque</td><td>107 lb ft @ 2,000 rpm</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>6-speed manual, front-wheel drive</td></tr>
+          <tr><td>Drive modes</td><td>Alfa DNA — Dynamic / Natural / All-weather</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>114 mph</td></tr>
+          <tr><td>0–62 mph</td><td>11.4 s</td></tr>
+          <tr><td>Fuel economy</td><td>67.3 mpg claimed</td></tr>
+          <tr><td>CO₂</td><td>99 g/km</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>4,063 / 1,720 / 1,446 mm</td></tr>
+          <tr><td>Wheelbase</td><td>2,511 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 1,145 kg</td></tr>
+          <tr><td>Tyres</td><td>215/40 R18</td></tr>
+          <tr><td>Fuel tank</td><td>45 litres</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>Replaced the second 500; the camper was sold at the same time, so the fleet went back to one. <span class="tbc">Stories, and the verdict — to be added.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== CHAPTER 10: VW TIGUAN =============================== -->
+<section class="page" id="c10" data-section="Chapter 10 — Volkswagen Tiguan R-Line" data-page="Page 10•1">
+  <div class="chap-head">
+    <div class="num"><small>Chapter</small>10</div>
+    <h2>Volkswagen Tiguan R-Line<em>Mk2 · 2.0 TDI 4Motion · full leather · current vehicle</em></h2>
+    <div class="era">Registration<b><span class="plate">FH69 ZGO</span></b>First registered late 2019 · owned 2019/20 – present</div>
+  </div>
+  <div class="cols wide">
+    <div>
+      <figure>
+        <svg viewBox="0 0 420 170" role="img" aria-label="Side elevation line drawing of a Volkswagen Tiguan">
+          <path d="M28 128 L28 100 Q28 86 46 82 L134 74 L168 48 Q176 42 194 42 L306 42 Q328 42 338 50 L358 76 L378 80 Q392 84 392 100 L392 128 Z" fill="#666" fill-opacity=".14" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M170 40 L330 40" stroke="#111" stroke-width="2"/>
+          <path d="M142 76 L172 50 L192 46 L192 78 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M198 46 L198 78 L256 78 L256 46 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M262 46 L262 78 L316 78 L316 46 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M322 46 L322 78 L352 78 L338 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
+          <path d="M196 78 L196 124 M258 78 L258 124 M320 78 L320 124" stroke="#111" stroke-width="1"/>
+          <rect x="246" y="90" width="10" height="3" fill="#111"/><rect x="308" y="90" width="10" height="3" fill="#111"/>
+          <path d="M34 90 L66 88 L66 96 L34 98 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <path d="M28 108 L392 104" stroke="#111" stroke-width="1"/>
+          <path d="M28 120 L392 120" stroke="#111" stroke-width="1.5"/>
+          <path d="M24 128 L396 128" stroke="#111" stroke-width="2"/>
+          <path d="M372 88 L386 88 L386 102 L378 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
+          <use href="#wheel-multi" x="66" y="96" width="56" height="56"/>
+          <use href="#wheel-multi" x="298" y="96" width="56" height="56"/>
+          <path d="M20 152 L400 152" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
+          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
+            <line x1="92" y1="78" x2="70" y2="36" stroke="#111"/><circle cx="66" cy="30" r="8" fill="#fff" stroke="#111"/><text x="66" y="34" text-anchor="middle">1</text>
+            <line x1="176" y1="60" x2="140" y2="24" stroke="#111"/><circle cx="134" cy="20" r="8" fill="#fff" stroke="#111"/><text x="134" y="24" text-anchor="middle">2</text>
+            <line x1="46" y1="94" x2="22" y2="60" stroke="#111"/><circle cx="16" cy="56" r="8" fill="#fff" stroke="#111"/><text x="16" y="60" text-anchor="middle">3</text>
+            <line x1="200" y1="130" x2="200" y2="160" stroke="#111"/><circle cx="200" cy="162" r="8" fill="#fff" stroke="#111"/><text x="200" y="166" text-anchor="middle">4</text>
+            <line x1="392" y1="112" x2="404" y2="140" stroke="#111"/><circle cx="406" cy="146" r="8" fill="#fff" stroke="#111"/><text x="406" y="150" text-anchor="middle">5</text>
+          </g>
+          <text x="410" y="166" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 10.1</text>
+        </svg>
+        <figcaption><b>Fig. 10.1 — Volkswagen Tiguan (Mk2, 5N), five-door, side elevation</b>
+          <ol><li>Engine, 2.0 TDI, transverse; Haldex 4Motion clutch on rear axle</li><li>Head-up display — projected onto a pop-up screen above the instruments</li><li>LED headlamps, adaptive cruise control radar in lower grille</li><li>R-Line: 19/20 in alloys, body kit, black headlining, heated leather seats throughout</li><li>Park Assist sensors, front and rear; parks itself</li></ol>
+        </figcaption>
+      </figure>
+      <div class="sec">
+        <h3>General description</h3>
+        <p>The second-generation Tiguan (2016–2024) sits on the MQB platform with the Golf and everything else; the R-Line trim adds the sporting body kit, big wheels and sports seats, and this one has the full equipment list on top. 4Motion is a Haldex-type clutch pack that sends drive to the rear wheels when the front ones need help. The 2.0 TDI was offered at 150 PS and 190 PS; the latter came only with the seven-speed DSG.</p>
+        <p>After nine cars whose luxuries ran to heated seats and a wedge roof, this one has heated seats all round, a head-up display, adaptive cruise, park assist and the electrics to run a small house.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Specifications <span>factory, 2.0 TDI 4Motion</span></h3>
+        <table class="spec">
+          <tr><th colspan="2">Vehicle</th></tr>
+          <tr><td>Colour</td><td><span class="swatch" style="background:#888"></span><span class="tbc">to be confirmed</span></td></tr>
+          <tr><td>Body</td><td>5-door SUV, 5 seats</td></tr>
+          <tr><td>Built</td><td>2016–2024 (Wolfsburg); this one MY2020</td></tr>
+          <tr><td>Trim</td><td>R-Line, full leather, all seats heated</td></tr>
+          <tr class="group"><td colspan="2">Engine</td></tr>
+          <tr><td>Type</td><td>4-cyl in-line, DOHC 16v, turbo-diesel, common-rail (EA288), transverse</td></tr>
+          <tr><td>Capacity</td><td>1,968 cc</td></tr>
+          <tr><td>Max power</td><td>150 PS @ 3,500 rpm or 190 PS @ 3,500 rpm <span class="tbc">tbc</span></td></tr>
+          <tr><td>Max torque</td><td>250 lb ft (150) / 295 lb ft (190)</td></tr>
+          <tr><td>Emissions</td><td>Euro 6d-TEMP, AdBlue SCR</td></tr>
+          <tr class="group"><td colspan="2">Transmission</td></tr>
+          <tr><td>Gearbox</td><td>7-speed DSG (dual-clutch), 4Motion all-wheel drive</td></tr>
+          <tr class="group"><td colspan="2">Performance</td></tr>
+          <tr><td>Top speed</td><td>125 mph (150) / 131 mph (190)</td></tr>
+          <tr><td>0–62 mph</td><td>9.3 s (150) / 7.9 s (190)</td></tr>
+          <tr><td>Fuel economy</td><td>approx. 44 mpg (WLTP)</td></tr>
+          <tr class="group"><td colspan="2">Equipment</td></tr>
+          <tr><td>Driver assistance</td><td>Head-up display, adaptive cruise control (ACC), Park Assist, Front Assist</td></tr>
+          <tr><td>Seats</td><td>Vienna leather, heated front and rear</td></tr>
+          <tr class="group"><td colspan="2">Dimensions &amp; weights</td></tr>
+          <tr><td>Length / width / height</td><td>4,486 / 1,839 / 1,673 mm</td></tr>
+          <tr><td>Wheelbase</td><td>2,681 mm</td></tr>
+          <tr><td>Kerb weight</td><td>approx. 1,750 kg</td></tr>
+          <tr><td>Tyres</td><td>235/50 R19 or 255/40 R20</td></tr>
+          <tr><td>Fuel tank</td><td>58 litres (+ 12 l AdBlue)</td></tr>
+          <tr><td>Towing (braked)</td><td>up to 2,500 kg</td></tr>
+        </table>
+      </div>
+      <div class="box owner">
+        <h4>Owner's notes</h4>
+        <p>Full leather seats, all heated. All the electrics, including the head-up display, park assist and adaptive cruise. The current car.</p>
+      </div>
+      <div class="box note">
+        <h4>Service record</h4>
+        <p><span class="tbc">Colour, engine output, mileage and anything worth recording — to be added.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== INDEX / COLOPHON =============================== -->
+<section class="page" data-section="Index" data-page="Page 11•1">
+  <div class="chap-head">
+    <div class="num"><small>Section</small>11</div>
+    <h2>Index<em>Recurring themes, cross-referenced</em></h2>
+    <div class="era">Totals<b>10 vehicles</b>9 cars · 1 van</div>
+  </div>
+  <div class="cols">
+    <div class="sec">
+      <h3>By the numbers</h3>
+      <table class="spec">
+        <tr><td>Two-cylinder engines</td><td>4 — Ch. 1, 6, 8, 9</td></tr>
+        <tr><td>Turbocharged</td><td>5 — Ch. 3, 5, 6, 9, 10 (+ Ch. 8 tbc)</td></tr>
+        <tr><td>Rear-engined</td><td>2 — Ch. 1, 7</td></tr>
+        <tr><td>Mid-engined</td><td>1 — Ch. 3</td></tr>
+        <tr><td>Four-wheel drive</td><td>1 — Ch. 10</td></tr>
+        <tr><td>Red</td><td>3 — Ch. 1, 2, 3 (the first three)</td></tr>
+        <tr><td>White</td><td>3 — Ch. 4, 6, 8</td></tr>
+        <tr><td>Italian</td><td>4 — Ch. 1, 6, 8, 9</td></tr>
+        <tr><td>Swedish</td><td>2 — Ch. 4, 5</td></tr>
+        <tr><td>German</td><td>2 — Ch. 7, 10</td></tr>
+        <tr><td>Heated seats</td><td>Ch. 4, 5, 10</td></tr>
+        <tr><td>Smallest engine</td><td>594 cc (Ch. 1)</td></tr>
+        <tr><td>Largest engine</td><td>2,290 cc (Ch. 5)</td></tr>
+        <tr><td>Most power</td><td>242 bhp (Ch. 3)</td></tr>
+        <tr><td>Least power</td><td>23 bhp (Ch. 1)</td></tr>
+        <tr><td>Registered in Cardiff (CE)</td><td>Ch. 6</td></tr>
+        <tr><td>Kettle on board</td><td>Ch. 7</td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="sec">
+        <h3>Colophon</h3>
+        <p class="about">Written up in Cardiff, September 2026, in the style of the workshop manuals that came with most of these cars and were consulted on the hard shoulder with several of them. Drawings are line-art side elevations, not to scale and not to be used for ordering parts. Set in Barlow, Barlow Condensed and Courier Prime. One HTML file, no dependencies beyond the fonts.</p>
+        <p class="about">Dates, engines and details marked <span class="tbc">tbc</span> are still being recovered from memory, old photographs and the DVLA.</p>
+      </div>
+      <div class="box caution">
+        <h4>Still on the list</h4>
+        <p><span class="tbc">The next chapter is unwritten.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dadwrap">
+  <span>© Stuart McNeil · A page from the windowsill</span>
+  <a href="https://stuartmcneil.github.io/window/">← Stuart McNeil</a>
+</div>
+
+</body>
+</html>
