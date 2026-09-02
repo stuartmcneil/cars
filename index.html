@@ -109,9 +109,10 @@ figcaption ol{counter-reset:item}
 .contents a:hover .t{text-decoration:underline}
 
 .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:4px;margin:14px 0 6px}
-.timeline div{background:#fff;border:1px solid var(--black);padding:6px 6px;font-family:"Courier Prime";font-size:11px;line-height:1.3;text-align:center}
-.timeline div b{display:block;font-family:"Barlow Condensed";font-size:15px;text-transform:uppercase;font-weight:700}
-.timeline div i{display:block;width:100%;height:6px;margin-top:5px;border:1px solid #333}
+.timeline a{display:block;background:#fff;border:1px solid var(--black);padding:6px 6px;font-family:"Courier Prime";font-size:11px;line-height:1.3;text-align:center;text-decoration:none;color:var(--ink);transition:background .15s}
+.timeline a:hover{background:var(--yellow)}
+.timeline a b{display:block;font-family:"Barlow Condensed";font-size:15px;text-transform:uppercase;font-weight:700}
+.timeline a i{display:block;width:100%;height:6px;margin-top:5px;border:1px solid #333}
 
 .about{font-size:14px;color:var(--ink-2)}
 .dadwrap{max-width:var(--page-w);margin:0 auto;background:var(--black);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;color:#bbb;font-size:13px}
@@ -187,16 +188,17 @@ figcaption ol{counter-reset:item}
   <div class="sec" style="margin-top:26px">
     <h3>Fleet timeline <span>Fig. 0.2 — registration year, oldest at left. Ownership dates to be confirmed.</span></h3>
     <div class="timeline">
-      <div><b>126</b>Fiat<i style="background:#c8102e"></i></div>
-      <div><b>Fiesta</b>Ford<i style="background:#c8102e"></i></div>
-      <div><b>MR2</b>Toyota<i style="background:#c8102e"></i></div>
-      <div><b>900</b>Saab<i style="background:#fff"></i></div>
-      <div><b>9000</b>Saab<i style="background:#1b2a5a"></i></div>
-      <div><b>500</b>Fiat<i style="background:#fff"></i></div>
-      <div><b>T25</b>VW<i style="background:#f2c230"></i></div>
-      <div><b>500</b>Fiat<i style="background:#fff"></i></div>
-      <div><b>MiTo</b>Alfa<i style="background:#111"></i></div>
-      <div><b>Tiguan</b>VW<i style="background:#888"></i></div>
+      <a href="#c1"><b>126</b>Fiat<i style="background:#c8102e"></i></a>
+      <a href="#c2"><b>Fiesta</b>Ford<i style="background:#c8102e"></i></a>
+      <a href="#c3"><b>MR2</b>Toyota<i style="background:#c8102e"></i></a>
+      <a href="#c4"><b>900</b>Saab<i style="background:#fff"></i></a>
+      <a href="#c5"><b>9000</b>Saab<i style="background:#1b2a5a"></i></a>
+      <a href="#c6"><b>500</b>Fiat<i style="background:#fff"></i></a>
+      <a href="#c7"><b>T25</b>VW<i style="background:#f2c230"></i></a>
+      <a href="#c8"><b>500</b>Fiat<i style="background:#fff"></i></a>
+      <a href="#c9"><b>MiTo</b>Alfa<i style="background:#111"></i></a>
+      <a href="#c10"><b>Tiguan</b>VW<i style="background:#888"></i></a>
+    </div>
     </div>
   </div>
 
