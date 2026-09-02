@@ -79,7 +79,7 @@ table.spec tr.group td{background:var(--paper-2);font-family:"Barlow Condensed";
 .swatch{display:inline-block;width:14px;height:14px;border:1px solid #333;vertical-align:-2px;margin-right:6px;border-radius:2px}
 
 figure{margin:0 0 22px;border:1px solid var(--black);background:#fff;padding:10px 12px 8px}
-figure svg{width:100%;height:auto;display:block}
+figure svg{width:100%;height:auto;display:block;max-height:520px;margin:0 auto}
 figcaption{font-size:13px;margin-top:6px;border-top:1px solid var(--rule);padding-top:6px}
 figcaption b{font-family:"Barlow Condensed";text-transform:uppercase;font-size:14px;letter-spacing:.04em}
 figcaption ol{margin:4px 0 0;padding-left:0;list-style:none;columns:2;column-gap:20px;font-family:"Courier Prime";font-size:12.5px;line-height:1.45}
@@ -268,29 +268,8 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Fiat 126">
-          <path d="M60 122 L60 102 Q60 90 70 88 L104 84 L124 60 Q130 50 146 49 L232 49 Q248 50 256 60 L272 84 L304 88 Q316 90 316 104 L316 122 Z" fill="#c8102e" fill-opacity=".12" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M150 55 L128 62 L110 84 L150 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M156 55 L156 84 L208 84 L208 55 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M214 55 L214 84 L262 84 L246 60 L236 55 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M154 84 L154 120 M210 84 L210 120" stroke="#111" stroke-width="1"/>
-          <rect x="198" y="94" width="8" height="3" fill="#111"/>
-          <circle cx="76" cy="98" r="6" fill="#fff" stroke="#111" stroke-width="1.2"/>
-          <path d="M286 96 L306 96 M286 101 L306 101 M286 106 L306 106" stroke="#111" stroke-width="1.2"/>
-          <path d="M56 116 L322 116" stroke="#111" stroke-width="2"/>
-          <use href="#wheel-steel" x="100" y="94" width="48" height="48"/>
-          <use href="#wheel-steel" x="248" y="94" width="48" height="48"/>
-          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <!-- callouts -->
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="296" y1="101" x2="350" y2="70" stroke="#111"/><circle cx="356" cy="66" r="8" fill="#fff" stroke="#111"/><text x="356" y="70" text-anchor="middle">1</text>
-            <line x1="180" y1="52" x2="180" y2="28" stroke="#111"/><circle cx="180" cy="22" r="8" fill="#fff" stroke="#111"/><text x="180" y="26" text-anchor="middle">2</text>
-            <line x1="76" y1="98" x2="40" y2="70" stroke="#111"/><circle cx="34" cy="66" r="8" fill="#fff" stroke="#111"/><text x="34" y="70" text-anchor="middle">3</text>
-            <line x1="76" y1="122" x2="50" y2="150" stroke="#111"/><circle cx="44" cy="152" r="8" fill="#fff" stroke="#111"/><text x="44" y="156" text-anchor="middle">4</text>
-          </g>
-          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 1.1</text>
-        </svg>
-        <figcaption><b>Fig. 1.1 — Fiat 126, side elevation</b>
+        <svg viewBox="-70 -70 1540 971" role="img" aria-label="Ink-traced illustration"><image href="art/fiat126.png" x="0" y="0" width="1400" height="831"/><path d="M-40 861 L1440 861" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="75" y1="260" x2="-25" y2="180" stroke="#111" stroke-width="2.5"/><circle cx="75" cy="260" r="5" fill="#111"/><circle cx="-25" cy="180" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="191" text-anchor="middle">1</text><line x1="700" y1="40" x2="700" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="700" cy="40" r="5" fill="#111"/><circle cx="700" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="700" y="-19" text-anchor="middle">2</text><line x1="985" y1="540" x2="1450" y2="470" stroke="#111" stroke-width="2.5"/><circle cx="985" cy="540" r="5" fill="#111"/><circle cx="1450" cy="470" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="481" text-anchor="middle">3</text><line x1="830" y1="340" x2="1450" y2="250" stroke="#111" stroke-width="2.5"/><circle cx="830" cy="340" r="5" fill="#111"/><circle cx="1450" cy="250" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="261" text-anchor="middle">4</text></g><text x="1450" y="893" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 1.1</text></svg>
+        <figcaption><b>Fig. 1.1 — Fiat 126, three-quarter front view</b>
           <ol><li>Engine (rear, air-cooled) — cooling louvres</li><li>Roof, steel (a folding canvas roof was optional)</li><li>Headlamp, 7 in round, sealed beam</li><li>Luggage compartment — front, small</li></ol>
         </figcaption>
       </figure>
@@ -345,36 +324,15 @@ figcaption ol{counter-reset:item}
 <section class="page" id="c2" data-section="Chapter 2 — Ford Fiesta" data-page="Page 2•1">
   <div class="chap-head">
     <div class="num"><small>Chapter</small>2</div>
-    <h2>Ford Fiesta<em>Mk4 (1995 model) · N-registration · red</em></h2>
+    <h2>Ford Fiesta<em>Mk3 · N-registration · red</em></h2>
     <div class="era">Registration<b><span class="plate unknown">N ··· ···</span></b>First registered 1995/96 · owned <span class="tbc">tbc</span><br><a class="uplink" href="#top">▲ Top</a></div>
   </div>
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Ford Fiesta Mk4">
-          <path d="M48 122 L48 104 Q49 92 64 88 L126 80 L164 56 Q172 50 186 50 L278 50 Q300 50 314 62 L340 88 Q360 92 362 106 L362 122 Z" fill="#c8102e" fill-opacity=".12" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M132 82 L166 58 L186 54 L186 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M192 54 L192 84 L248 84 L248 54 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M254 54 L254 84 L318 84 L306 62 L296 54 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M250 84 L250 120 M190 84 L190 120" stroke="#111" stroke-width="1"/>
-          <rect x="238" y="94" width="9" height="3" fill="#111"/>
-          <path d="M52 94 Q64 90 78 92 L78 100 Q64 102 52 100 Z" fill="#fff" stroke="#111" stroke-width="1.2"/>
-          <path d="M60 106 Q66 104 72 106" stroke="#111" stroke-width="1"/>
-          <path d="M44 116 L368 116" stroke="#111" stroke-width="2"/>
-          <path d="M346 92 L358 92 L358 108 L350 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <use href="#wheel-steel" x="86" y="94" width="48" height="48"/>
-          <use href="#wheel-steel" x="276" y="94" width="48" height="48"/>
-          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="66" y1="96" x2="40" y2="66" stroke="#111"/><circle cx="34" cy="62" r="8" fill="#fff" stroke="#111"/><text x="34" y="66" text-anchor="middle">1</text>
-            <line x1="100" y1="84" x2="100" y2="40" stroke="#111"/><circle cx="100" cy="34" r="8" fill="#fff" stroke="#111"/><text x="100" y="38" text-anchor="middle">2</text>
-            <line x1="330" y1="76" x2="370" y2="46" stroke="#111"/><circle cx="376" cy="42" r="8" fill="#fff" stroke="#111"/><text x="376" y="46" text-anchor="middle">3</text>
-            <line x1="300" y1="126" x2="340" y2="150" stroke="#111"/><circle cx="346" cy="152" r="8" fill="#fff" stroke="#111"/><text x="346" y="156" text-anchor="middle">4</text>
-          </g>
-          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 2.1</text>
-        </svg>
-        <figcaption><b>Fig. 2.1 — Ford Fiesta Mk4, three-door, side elevation</b>
-          <ol><li>Oval "New Edge" grille and headlamps (Mk4 identifier)</li><li>Engine, transverse, front-wheel drive</li><li>Tailgate</li><li>Steel wheel, 13 in, plastic trim</li></ol>
+        <svg viewBox="-70 -70 1540 897" role="img" aria-label="Ink-traced illustration"><image href="art/fordfiesta.png" x="0" y="0" width="1400" height="757"/><path d="M-40 787 L1440 787" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="1213" y1="490" x2="1450" y2="430" stroke="#111" stroke-width="2.5"/><circle cx="1213" cy="490" r="5" fill="#111"/><circle cx="1450" cy="430" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="441" text-anchor="middle">1</text><line x1="933" y1="350" x2="1000" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="933" cy="350" r="5" fill="#111"/><circle cx="1000" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1000" y="-19" text-anchor="middle">2</text><line x1="93" y1="280" x2="-25" y2="200" stroke="#111" stroke-width="2.5"/><circle cx="93" cy="280" r="5" fill="#111"/><circle cx="-25" cy="200" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="211" text-anchor="middle">3</text><line x1="817" y1="607" x2="600" y2="820" stroke="#111" stroke-width="2.5"/><circle cx="817" cy="607" r="5" fill="#111"/><circle cx="600" cy="820" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="600" y="831" text-anchor="middle">4</text></g><text x="1450" y="819" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 2.1</text></svg>
+        <figcaption><b>Fig. 2.1 — Ford Fiesta Mk3, three-door, three-quarter front view</b>
+          <ol><li>Slotted grille and rectangular headlamps (Mk3 identifier)</li><li>Engine, transverse, front-wheel drive</li><li>Tailgate</li><li>Steel wheel, 13 in, plastic trim</li></ol>
         </figcaption>
       </figure>
       <div class="sec">
@@ -384,7 +342,7 @@ figcaption ol{counter-reset:item}
       </div>
       <div class="box note">
         <h4>Identification</h4>
-        <p>An N-plate red Fiesta could be either a late Mk3 "Classic" (slotted grille, flat bonnet) or an early Mk4 (oval grille, oval lamps). The drawing shows a Mk4. <span class="tbc">Confirm which, and the engine (1.25 / 1.3 / 1.4 / 1.8D).</span></p>
+        <p>An N-plate red Fiesta could be either a late Mk3 "Classic" (slotted grille, flat bonnet) or an early Mk4 (oval grille, oval lamps). The photo chosen for the drawing is a Mk3, so that is what is shown. <span class="tbc">Confirm the engine (1.1 / 1.3 / 1.4 / 1.8D).</span></p>
       </div>
     </div>
     <div>
@@ -434,32 +392,8 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a lowered Toyota MR2 Turbo with T-bar roof">
-          <path d="M36 124 L36 108 Q37 98 52 94 L120 88 L166 66 Q176 60 192 60 L242 60 Q266 60 288 70 L334 90 L364 96 Q380 100 380 112 L380 124 Z" fill="#c8102e" fill-opacity=".12" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M138 88 L168 68 L190 64 L190 90 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M196 64 L196 90 L250 90 L266 72 L250 64 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M270 74 L292 78 L322 90 L272 90 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <rect x="206" y="57" width="30" height="4" fill="#fff" stroke="#111" stroke-width="1"/>
-          <path d="M194 90 L194 122 M252 90 L252 122" stroke="#111" stroke-width="1"/>
-          <rect x="240" y="100" width="9" height="3" fill="#111"/>
-          <path d="M54 96 L84 94 L84 100 L54 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <path d="M300 96 L300 112 M310 96 L310 112 M320 98 L320 112" stroke="#111" stroke-width="1"/>
-          <path d="M340 104 L372 104" stroke="#111" stroke-width="1"/>
-          <path d="M32 118 L386 118" stroke="#111" stroke-width="2"/>
-          <path d="M30 124 L120 124 M290 124 L386 124" stroke="#111" stroke-width="2.5"/>
-          <use href="#wheel-tri" x="78" y="98" width="44" height="44"/>
-          <use href="#wheel-tri" x="296" y="94" width="50" height="50"/>
-          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="310" y1="104" x2="370" y2="60" stroke="#111"/><circle cx="376" cy="56" r="8" fill="#fff" stroke="#111"/><text x="376" y="60" text-anchor="middle">1</text>
-            <line x1="221" y1="57" x2="221" y2="30" stroke="#111"/><circle cx="221" cy="24" r="8" fill="#fff" stroke="#111"/><text x="221" y="28" text-anchor="middle">2</text>
-            <line x1="321" y1="132" x2="360" y2="150" stroke="#111"/><circle cx="366" cy="152" r="8" fill="#fff" stroke="#111"/><text x="366" y="156" text-anchor="middle">3</text>
-            <line x1="60" y1="130" x2="40" y2="150" stroke="#111"/><circle cx="34" cy="152" r="8" fill="#fff" stroke="#111"/><text x="34" y="156" text-anchor="middle">4</text>
-            <line x1="222" y1="78" x2="140" y2="30" stroke="#111"/><circle cx="134" cy="26" r="8" fill="#fff" stroke="#111"/><text x="134" y="30" text-anchor="middle">5</text>
-          </g>
-          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 3.1</text>
-        </svg>
-        <figcaption><b>Fig. 3.1 — Toyota MR2 Turbo (SW20), side elevation, as modified</b>
+        <svg viewBox="-70 -70 1540 839" role="img" aria-label="Ink-traced illustration"><image href="art/mr2turbo.png" x="0" y="0" width="1400" height="699"/><path d="M-40 729 L1440 729" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="140" y1="187" x2="-25" y2="120" stroke="#111" stroke-width="2.5"/><circle cx="140" cy="187" r="5" fill="#111"/><circle cx="-25" cy="120" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="131" text-anchor="middle">1</text><line x1="583" y1="58" x2="583" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="583" cy="58" r="5" fill="#111"/><circle cx="583" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="583" y="-19" text-anchor="middle">2</text><line x1="70" y1="327" x2="-25" y2="380" stroke="#111" stroke-width="2.5"/><circle cx="70" cy="327" r="5" fill="#111"/><circle cx="-25" cy="380" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="391" text-anchor="middle">3</text><line x1="537" y1="583" x2="537" y2="760" stroke="#111" stroke-width="2.5"/><circle cx="537" cy="583" r="5" fill="#111"/><circle cx="537" cy="760" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="537" y="771" text-anchor="middle">4</text><line x1="467" y1="140" x2="300" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="467" cy="140" r="5" fill="#111"/><circle cx="300" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="300" y="-19" text-anchor="middle">5</text></g><text x="1450" y="761" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 3.1</text></svg>
+        <figcaption><b>Fig. 3.1 — Toyota MR2 Turbo (SW20), T-bar, three-quarter front view</b>
           <ol><li>Engine, 3S-GTE turbo, transverse, behind the seats</li><li>T-bar roof, two removable glass panels</li><li>Rear wheel, tri-spoke, wide section — oversize</li><li>Lowered suspension, race-type; ride height reduced</li><li>Bucket seats (fixed-back)</li></ol>
         </figcaption>
       </figure>
@@ -523,29 +457,8 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a classic Saab 900 hatchback">
-          <path d="M28 122 L28 104 Q28 92 44 88 L100 84 L150 78 L184 56 Q192 50 206 50 L276 50 Q292 50 300 56 L332 82 L368 88 Q386 92 388 108 L388 122 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M156 80 Q172 60 190 55 L208 52 L208 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M214 52 L214 84 L268 84 L268 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M274 52 L274 84 L336 84 L302 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M212 84 L212 120 M270 84 L270 120" stroke="#111" stroke-width="1"/>
-          <rect x="258" y="94" width="9" height="3" fill="#111"/>
-          <path d="M34 94 L60 92 L60 100 L34 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <path d="M40 88 L150 78" stroke="#111" stroke-width="1"/>
-          <path d="M24 116 L392 116" stroke="#111" stroke-width="2"/>
-          <path d="M372 92 L384 92 L384 108 L376 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <use href="#wheel-multi" x="84" y="94" width="48" height="48"/>
-          <use href="#wheel-multi" x="296" y="94" width="48" height="48"/>
-          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="176" y1="66" x2="150" y2="30" stroke="#111"/><circle cx="146" cy="24" r="8" fill="#fff" stroke="#111"/><text x="146" y="28" text-anchor="middle">1</text>
-            <line x1="80" y1="84" x2="60" y2="50" stroke="#111"/><circle cx="56" cy="44" r="8" fill="#fff" stroke="#111"/><text x="56" y="48" text-anchor="middle">2</text>
-            <line x1="320" y1="70" x2="356" y2="40" stroke="#111"/><circle cx="362" cy="36" r="8" fill="#fff" stroke="#111"/><text x="362" y="40" text-anchor="middle">3</text>
-            <line x1="46" y1="98" x2="26" y2="70" stroke="#111"/><circle cx="20" cy="66" r="8" fill="#fff" stroke="#111"/><text x="20" y="70" text-anchor="middle">4</text>
-          </g>
-          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 4.1</text>
-        </svg>
-        <figcaption><b>Fig. 4.1 — Saab 900 (classic), three-door hatchback, side elevation</b>
+        <svg viewBox="-70 -70 1540 772" role="img" aria-label="Ink-traced illustration"><image href="art/saab900.png" x="0" y="0" width="1400" height="632"/><path d="M-40 662 L1440 662" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="397" y1="163" x2="397" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="397" cy="163" r="5" fill="#111"/><circle cx="397" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="397" y="-19" text-anchor="middle">1</text><line x1="210" y1="280" x2="-25" y2="180" stroke="#111" stroke-width="2.5"/><circle cx="210" cy="280" r="5" fill="#111"/><circle cx="-25" cy="180" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="191" text-anchor="middle">2</text><line x1="1167" y1="210" x2="1450" y2="150" stroke="#111" stroke-width="2.5"/><circle cx="1167" cy="210" r="5" fill="#111"/><circle cx="1450" cy="150" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="161" text-anchor="middle">3</text><line x1="82" y1="350" x2="-25" y2="420" stroke="#111" stroke-width="2.5"/><circle cx="82" cy="350" r="5" fill="#111"/><circle cx="-25" cy="420" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="431" text-anchor="middle">4</text></g><text x="1450" y="694" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 4.1</text></svg>
+        <figcaption><b>Fig. 4.1 — Saab 900 (classic), three-door, three-quarter front view</b>
           <ol><li>Windscreen, deeply curved, aircraft-style — the "boat" screen</li><li>Bonnet, clamshell, front-hinged; engine installed "backwards" with gearbox beneath</li><li>Hatchback tailgate</li><li>Headlamp with wiper</li></ol>
         </figcaption>
       </figure>
@@ -605,30 +518,8 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Saab 9000 Aero">
-          <path d="M22 122 L22 104 Q22 92 40 88 L134 80 L168 56 Q178 50 194 50 L286 50 Q306 50 318 58 L352 82 L378 86 Q394 90 396 106 L396 122 Z" fill="#1b2a5a" fill-opacity=".15" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M142 82 L170 58 L192 54 L192 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M198 54 L198 84 L254 84 L254 54 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M260 54 L260 84 L328 84 L314 66 L300 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M196 84 L196 120 M256 84 L256 120" stroke="#111" stroke-width="1"/>
-          <rect x="244" y="94" width="9" height="3" fill="#111"/><rect x="304" y="94" width="9" height="3" fill="#111"/>
-          <path d="M28 94 L56 92 L56 100 L28 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <path d="M22 108 L396 108" stroke="#111" stroke-width="1"/>
-          <path d="M18 118 L400 118" stroke="#111" stroke-width="2"/>
-          <path d="M22 122 L400 122" stroke="#111" stroke-width="2.5"/>
-          <path d="M380 92 L392 92 L392 106 L384 106 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <use href="#wheel-multi" x="80" y="94" width="48" height="48"/>
-          <use href="#wheel-multi" x="298" y="94" width="48" height="48"/>
-          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="90" y1="84" x2="70" y2="46" stroke="#111"/><circle cx="66" cy="40" r="8" fill="#fff" stroke="#111"/><text x="66" y="44" text-anchor="middle">1</text>
-            <line x1="226" y1="76" x2="226" y2="30" stroke="#111"/><circle cx="226" cy="24" r="8" fill="#fff" stroke="#111"/><text x="226" y="28" text-anchor="middle">2</text>
-            <line x1="200" y1="122" x2="200" y2="150" stroke="#111"/><circle cx="200" cy="152" r="8" fill="#fff" stroke="#111"/><text x="200" y="156" text-anchor="middle">3</text>
-            <line x1="340" y1="72" x2="372" y2="40" stroke="#111"/><circle cx="378" cy="36" r="8" fill="#fff" stroke="#111"/><text x="378" y="40" text-anchor="middle">4</text>
-          </g>
-          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 5.1</text>
-        </svg>
-        <figcaption><b>Fig. 5.1 — Saab 9000 Aero (CS), five-door, side elevation</b>
+        <svg viewBox="-70 -70 1540 848" role="img" aria-label="Ink-traced illustration"><image href="art/saab9000.png" x="0" y="0" width="1400" height="708"/><path d="M-40 738 L1440 738" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="933" y1="280" x2="933" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="933" cy="280" r="5" fill="#111"/><circle cx="933" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="933" y="-19" text-anchor="middle">1</text><line x1="280" y1="163" x2="-25" y2="100" stroke="#111" stroke-width="2.5"/><circle cx="280" cy="163" r="5" fill="#111"/><circle cx="-25" cy="100" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="111" text-anchor="middle">2</text><line x1="303" y1="537" x2="200" y2="760" stroke="#111" stroke-width="2.5"/><circle cx="303" cy="537" r="5" fill="#111"/><circle cx="200" cy="760" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="200" y="771" text-anchor="middle">3</text><line x1="70" y1="327" x2="-25" y2="380" stroke="#111" stroke-width="2.5"/><circle cx="70" cy="327" r="5" fill="#111"/><circle cx="-25" cy="380" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="391" text-anchor="middle">4</text></g><text x="1450" y="770" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 5.1</text></svg>
+        <figcaption><b>Fig. 5.1 — Saab 9000 Aero (CS), five-door, three-quarter front view</b>
           <ol><li>Engine, turbo, transverse, front-wheel drive</li><li>Front seats — leather, heated, sports (Recaro-type) with adjustable bolsters</li><li>Aero body kit: deep sills and bumpers</li><li>Tailgate with spoiler</li></ol>
         </figcaption>
       </figure>
@@ -688,29 +579,8 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Fiat 500">
-          <path d="M84 122 L84 104 Q84 90 98 86 Q110 62 136 53 Q166 44 210 44 Q250 44 274 52 Q300 62 308 88 Q324 92 326 108 L326 122 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M120 84 Q132 62 154 55 L182 52 L182 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M188 52 L188 84 L242 84 L242 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M248 52 L248 84 L292 84 Q292 66 272 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M186 84 L186 120 M244 84 L244 120" stroke="#111" stroke-width="1"/>
-          <rect x="232" y="94" width="9" height="3" fill="#111"/>
-          <circle cx="102" cy="92" r="7" fill="#fff" stroke="#111" stroke-width="1.2"/>
-          <circle cx="98" cy="106" r="3" fill="none" stroke="#111"/>
-          <path d="M80 116 L332 116" stroke="#111" stroke-width="2"/>
-          <path d="M312 92 L322 92 L322 108 L316 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <use href="#wheel-multi" x="112" y="94" width="48" height="48"/>
-          <use href="#wheel-multi" x="254" y="94" width="48" height="48"/>
-          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="112" y1="80" x2="70" y2="50" stroke="#111"/><circle cx="64" cy="46" r="8" fill="#fff" stroke="#111"/><text x="64" y="50" text-anchor="middle">1</text>
-            <line x1="102" y1="92" x2="60" y2="100" stroke="#111"/><circle cx="52" cy="100" r="8" fill="#fff" stroke="#111"/><text x="52" y="104" text-anchor="middle">2</text>
-            <line x1="210" y1="44" x2="210" y2="22" stroke="#111"/><circle cx="210" cy="16" r="8" fill="#fff" stroke="#111"/><text x="210" y="20" text-anchor="middle">3</text>
-            <line x1="215" y1="100" x2="215" y2="150" stroke="#111"/><circle cx="215" cy="152" r="8" fill="#fff" stroke="#111"/><text x="215" y="156" text-anchor="middle">4</text>
-          </g>
-          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 6.1</text>
-        </svg>
-        <figcaption><b>Fig. 6.1 — Fiat 500 (2007 type), three-door, side elevation</b>
+        <svg viewBox="-70 -70 1540 927" role="img" aria-label="Ink-traced illustration"><image href="art/fiat500sport.png" x="0" y="0" width="1400" height="787"/><path d="M-40 817 L1440 817" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="770" y1="257" x2="770" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="770" cy="257" r="5" fill="#111"/><circle cx="770" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="770" y="-19" text-anchor="middle">1</text><line x1="1167" y1="443" x2="1450" y2="380" stroke="#111" stroke-width="2.5"/><circle cx="1167" cy="443" r="5" fill="#111"/><circle cx="1450" cy="380" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="391" text-anchor="middle">2</text><line x1="653" y1="47" x2="400" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="653" cy="47" r="5" fill="#111"/><circle cx="400" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="400" y="-19" text-anchor="middle">3</text><line x1="257" y1="140" x2="-25" y2="90" stroke="#111" stroke-width="2.5"/><circle cx="257" cy="140" r="5" fill="#111"/><circle cx="-25" cy="90" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="101" text-anchor="middle">4</text></g><text x="1450" y="849" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 6.1</text></svg>
+        <figcaption><b>Fig. 6.1 — Fiat 500 Sport, three-door, three-quarter front view</b>
           <ol><li>Engine, 875 cc TwinAir, transverse, turbocharged, MultiAir valve control</li><li>Headlamp, round, with separate indicator below</li><li>Roof — Sport had a fixed roof; glass sunroof optional</li><li>Interior: black (Sport cloth/leather trim)</li></ol>
         </figcaption>
       </figure>
@@ -771,37 +641,9 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 180" role="img" aria-label="Side elevation line drawing of a VW T25 camper van with the wedge roof raised">
-          <!-- raised wedge roof -->
-          <path d="M100 62 L106 22 L344 14 L350 62 Z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/>
-          <path d="M104 62 L106 22 L344 14 L348 40 L110 50 Z" fill="url(#hatch2)" stroke="none"/>
-          <path d="M110 50 L348 40" stroke="#111" stroke-width="1"/>
-          <!-- body -->
-          <path d="M40 132 L40 78 Q40 62 58 62 L342 62 Q368 62 372 84 L376 132 Z" fill="#f2c230" fill-opacity=".28" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M40 104 L376 104" stroke="#111" stroke-width="1"/>
-          <path d="M46 68 L46 100 L104 100 L104 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M112 68 L112 100 L178 100 L178 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M186 68 L186 100 L284 100 L284 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M292 68 L292 100 L360 100 L360 68 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M110 64 L110 130 M184 64 L184 130 M286 64 L286 130" stroke="#111" stroke-width="1"/>
-          <rect x="120" y="110" width="9" height="3" fill="#111"/><rect x="192" y="110" width="9" height="3" fill="#111"/>
-          <rect x="44" y="110" width="12" height="9" fill="#fff" stroke="#111"/>
-          <path d="M340 118 L366 118 M340 123 L366 123 M340 128 L366 128" stroke="#111" stroke-width="1.2"/>
-          <path d="M36 132 L380 132" stroke="#111" stroke-width="2"/>
-          <use href="#wheel-steel" x="72" y="108" width="50" height="50"/>
-          <use href="#wheel-steel" x="284" y="108" width="50" height="50"/>
-          <path d="M20 158 L400 158" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="353" y1="123" x2="392" y2="100" stroke="#111"/><circle cx="398" cy="96" r="8" fill="#fff" stroke="#111"/><text x="398" y="100" text-anchor="middle">1</text>
-            <line x1="230" y1="30" x2="230" y2="10" stroke="#111"/><circle cx="236" cy="8" r="8" fill="#fff" stroke="#111"/><text x="236" y="12" text-anchor="middle">2</text>
-            <line x1="235" y1="118" x2="235" y2="166" stroke="#111"/><circle cx="235" cy="170" r="8" fill="#fff" stroke="#111"/><text x="235" y="174" text-anchor="middle">3</text>
-            <line x1="46" y1="72" x2="26" y2="46" stroke="#111"/><circle cx="20" cy="42" r="8" fill="#fff" stroke="#111"/><text x="20" y="46" text-anchor="middle">4</text>
-            <line x1="330" y1="82" x2="392" y2="50" stroke="#111"/><circle cx="398" cy="46" r="8" fill="#fff" stroke="#111"/><text x="398" y="50" text-anchor="middle">5</text>
-          </g>
-          <text x="410" y="176" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 7.1</text>
-        </svg>
-        <figcaption><b>Fig. 7.1 — Volkswagen T25 (Type 2 T3) camper, side elevation, roof raised</b>
-          <ol><li>Engine, flat-four "wasserboxer", water-cooled, rear-mounted; radiator at front</li><li>Elevating "wedge" roof, white GRP, canvas sides — standing room in the rear</li><li>Sliding side door</li><li>Windscreen, flat, huge; driver sits over the front axle</li><li>Kitchen unit: two-ring hob, sink, fridge (behind sliding door)</li></ol>
+        <svg viewBox="-70 -70 1540 1142" role="img" aria-label="Ink-traced illustration"><image href="art/vwt25.png" x="0" y="0" width="1400" height="1002"/><path d="M-40 1032 L1440 1032" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="980" y1="747" x2="1450" y2="780" stroke="#111" stroke-width="2.5"/><circle cx="980" cy="747" r="5" fill="#111"/><circle cx="1450" cy="780" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="791" text-anchor="middle">1</text><line x1="583" y1="93" x2="583" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="583" cy="93" r="5" fill="#111"/><circle cx="583" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="583" y="-19" text-anchor="middle">2</text><line x1="887" y1="467" x2="1450" y2="400" stroke="#111" stroke-width="2.5"/><circle cx="887" cy="467" r="5" fill="#111"/><circle cx="1450" cy="400" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="411" text-anchor="middle">3</text><line x1="233" y1="327" x2="-25" y2="250" stroke="#111" stroke-width="2.5"/><circle cx="233" cy="327" r="5" fill="#111"/><circle cx="-25" cy="250" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="-25" y="261" text-anchor="middle">4</text><line x1="770" y1="350" x2="1100" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="770" cy="350" r="5" fill="#111"/><circle cx="1100" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1100" y="-19" text-anchor="middle">5</text></g><text x="1450" y="1064" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 7.1</text></svg>
+        <figcaption><b>Fig. 7.1 — Volkswagen T25 camper, three-quarter front view (high-top shown; yours had a wedge roof)</b>
+          <ol><li>Engine, flat-four "wasserboxer", water-cooled, rear-mounted; radiator at front</li><li>Raised roof — yours was the elevating "wedge" type, white GRP with canvas sides; standing room in the rear</li><li>Sliding side door</li><li>Windscreen, flat, huge; driver sits over the front axle</li><li>Kitchen unit: two-ring hob, sink, fridge (behind sliding door)</li></ol>
         </figcaption>
       </figure>
       <div class="sec">
@@ -862,27 +704,8 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 160" role="img" aria-label="Side elevation line drawing of a Fiat 500, second example">
-          <path d="M84 122 L84 104 Q84 90 98 86 Q110 62 136 53 Q166 44 210 44 Q250 44 274 52 Q300 62 308 88 Q324 92 326 108 L326 122 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M120 84 Q132 62 154 55 L182 52 L182 84 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M188 52 L188 84 L242 84 L242 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M248 52 L248 84 L292 84 Q292 66 272 56 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M186 84 L186 120 M244 84 L244 120" stroke="#111" stroke-width="1"/>
-          <rect x="232" y="94" width="9" height="3" fill="#111"/>
-          <circle cx="102" cy="92" r="7" fill="#fff" stroke="#111" stroke-width="1.2"/>
-          <circle cx="98" cy="106" r="3" fill="none" stroke="#111"/>
-          <path d="M80 116 L332 116" stroke="#111" stroke-width="2"/>
-          <path d="M312 92 L322 92 L322 108 L316 108 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <use href="#wheel-multi" x="112" y="94" width="48" height="48"/>
-          <use href="#wheel-multi" x="254" y="94" width="48" height="48"/>
-          <path d="M20 142 L400 142" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="112" y1="80" x2="70" y2="50" stroke="#111"/><circle cx="64" cy="46" r="8" fill="#fff" stroke="#111"/><text x="64" y="50" text-anchor="middle">1</text>
-            <line x1="300" y1="80" x2="350" y2="50" stroke="#111"/><circle cx="356" cy="46" r="8" fill="#fff" stroke="#111"/><text x="356" y="50" text-anchor="middle">2</text>
-          </g>
-          <text x="410" y="154" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 8.1</text>
-        </svg>
-        <figcaption><b>Fig. 8.1 — Fiat 500 (2007 type), second example — refer to Fig. 6.1 for full key</b>
+        <svg viewBox="-70 -70 1540 927" role="img" aria-label="Ink-traced illustration"><image href="art/fiat500sport.png" x="0" y="0" width="1400" height="787"/><path d="M-40 817 L1440 817" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="770" y1="257" x2="770" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="770" cy="257" r="5" fill="#111"/><circle cx="770" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="770" y="-19" text-anchor="middle">1</text><line x1="1167" y1="443" x2="1450" y2="380" stroke="#111" stroke-width="2.5"/><circle cx="1167" cy="443" r="5" fill="#111"/><circle cx="1450" cy="380" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="391" text-anchor="middle">2</text></g><text x="1450" y="849" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 8.1</text></svg>
+        <figcaption><b>Fig. 8.1 — Fiat 500 Sport, second example — refer to Fig. 6.1 for full key</b>
           <ol><li>Engine, transverse — TwinAir 0.9 or 1.2 8v <span class="tbc">tbc</span></li><li>Rear spoiler (Sport)</li></ol>
         </figcaption>
       </figure>
@@ -1010,33 +833,8 @@ figcaption ol{counter-reset:item}
   <div class="cols wide">
     <div>
       <figure>
-        <svg viewBox="0 0 420 170" role="img" aria-label="Side elevation line drawing of a Volkswagen Tiguan">
-          <path d="M28 128 L28 100 Q28 86 46 82 L134 74 L168 48 Q176 42 194 42 L306 42 Q328 42 338 50 L358 76 L378 80 Q392 84 392 100 L392 128 Z" fill="#666" fill-opacity=".14" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/>
-          <path d="M170 40 L330 40" stroke="#111" stroke-width="2"/>
-          <path d="M142 76 L172 50 L192 46 L192 78 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M198 46 L198 78 L256 78 L256 46 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M262 46 L262 78 L316 78 L316 46 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M322 46 L322 78 L352 78 L338 52 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
-          <path d="M196 78 L196 124 M258 78 L258 124 M320 78 L320 124" stroke="#111" stroke-width="1"/>
-          <rect x="246" y="90" width="10" height="3" fill="#111"/><rect x="308" y="90" width="10" height="3" fill="#111"/>
-          <path d="M34 90 L66 88 L66 96 L34 98 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <path d="M28 108 L392 104" stroke="#111" stroke-width="1"/>
-          <path d="M28 120 L392 120" stroke="#111" stroke-width="1.5"/>
-          <path d="M24 128 L396 128" stroke="#111" stroke-width="2"/>
-          <path d="M372 88 L386 88 L386 102 L378 102 Z" fill="#fff" stroke="#111" stroke-width="1"/>
-          <use href="#wheel-multi" x="66" y="96" width="56" height="56"/>
-          <use href="#wheel-multi" x="298" y="96" width="56" height="56"/>
-          <path d="M20 152 L400 152" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-          <g font-family="Courier Prime, monospace" font-size="11" font-weight="700">
-            <line x1="92" y1="78" x2="70" y2="36" stroke="#111"/><circle cx="66" cy="30" r="8" fill="#fff" stroke="#111"/><text x="66" y="34" text-anchor="middle">1</text>
-            <line x1="176" y1="60" x2="140" y2="24" stroke="#111"/><circle cx="134" cy="20" r="8" fill="#fff" stroke="#111"/><text x="134" y="24" text-anchor="middle">2</text>
-            <line x1="46" y1="94" x2="22" y2="60" stroke="#111"/><circle cx="16" cy="56" r="8" fill="#fff" stroke="#111"/><text x="16" y="60" text-anchor="middle">3</text>
-            <line x1="200" y1="130" x2="200" y2="160" stroke="#111"/><circle cx="200" cy="162" r="8" fill="#fff" stroke="#111"/><text x="200" y="166" text-anchor="middle">4</text>
-            <line x1="392" y1="112" x2="404" y2="140" stroke="#111"/><circle cx="406" cy="146" r="8" fill="#fff" stroke="#111"/><text x="406" y="150" text-anchor="middle">5</text>
-          </g>
-          <text x="410" y="166" font-family="Courier Prime" font-size="10" text-anchor="end">Fig. 10.1</text>
-        </svg>
-        <figcaption><b>Fig. 10.1 — Volkswagen Tiguan (Mk2, 5N), five-door, side elevation</b>
+        <svg viewBox="-70 -70 1540 1028" role="img" aria-label="Ink-traced illustration"><image href="art/vwtiguan.png" x="0" y="0" width="1400" height="888"/><path d="M-40 918 L1440 918" stroke="#555" stroke-width="2" stroke-dasharray="10 10"/><g font-family="Courier Prime, monospace" font-size="30" font-weight="700"><line x1="933" y1="280" x2="933" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="933" cy="280" r="5" fill="#111"/><circle cx="933" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="933" y="-19" text-anchor="middle">1</text><line x1="653" y1="210" x2="450" y2="-30" stroke="#111" stroke-width="2.5"/><circle cx="653" cy="210" r="5" fill="#111"/><circle cx="450" cy="-30" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="450" y="-19" text-anchor="middle">2</text><line x1="1167" y1="467" x2="1450" y2="420" stroke="#111" stroke-width="2.5"/><circle cx="1167" cy="467" r="5" fill="#111"/><circle cx="1450" cy="420" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="431" text-anchor="middle">3</text><line x1="560" y1="747" x2="560" y2="950" stroke="#111" stroke-width="2.5"/><circle cx="560" cy="747" r="5" fill="#111"/><circle cx="560" cy="950" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="560" y="961" text-anchor="middle">4</text><line x1="1097" y1="700" x2="1450" y2="700" stroke="#111" stroke-width="2.5"/><circle cx="1097" cy="700" r="5" fill="#111"/><circle cx="1450" cy="700" r="24" fill="#fff" stroke="#111" stroke-width="2.5"/><text x="1450" y="711" text-anchor="middle">5</text></g><text x="1450" y="950" font-family="Courier Prime, monospace" font-size="26" text-anchor="end">Fig. 10.1</text></svg>
+        <figcaption><b>Fig. 10.1 — Volkswagen Tiguan R-Line (Mk2), three-quarter front view</b>
           <ol><li>Engine, 2.0 TDI, transverse; Haldex 4Motion clutch on rear axle</li><li>Head-up display — projected onto a pop-up screen above the instruments</li><li>LED headlamps, adaptive cruise control radar in lower grille</li><li>R-Line: 19/20 in alloys, body kit, black headlining, heated leather seats throughout</li><li>Park Assist sensors, front and rear; parks itself</li></ol>
         </figcaption>
       </figure>
@@ -1124,7 +922,7 @@ figcaption ol{counter-reset:item}
     <div>
       <div class="sec">
         <h3>Colophon</h3>
-        <p class="about">Written up in Cardiff, September 2026, in the style of the workshop manuals that came with most of these cars and were consulted on the hard shoulder with several of them. Drawings are line-art side elevations, not to scale and not to be used for ordering parts. Set in Barlow, Barlow Condensed and Courier Prime. One HTML file, no dependencies beyond the fonts.</p>
+        <p class="about">Written up in Cardiff, September 2026, in the style of the workshop manuals that came with most of these cars and were consulted on the hard shoulder with several of them. Drawings are ink tracings made from photographs of the same models (the MiTo, for now, is a side elevation drawn by hand); not to scale and not to be used for ordering parts. Set in Barlow, Barlow Condensed and Courier Prime. One HTML file, no dependencies beyond the fonts.</p>
         <p class="about">Dates, engines and details marked <span class="tbc">tbc</span> are still being recovered from memory, old photographs and the DVLA.</p>
       </div>
       <div class="box caution">
